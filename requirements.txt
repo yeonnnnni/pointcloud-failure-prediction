@@ -1,0 +1,13 @@
+numpy
+scipy
+pandas
+pyarrow
+scikit-learn
+lightgbm
+matplotlib
+seaborn
+h5py
+joblib
+pytest
+requests
+gdown

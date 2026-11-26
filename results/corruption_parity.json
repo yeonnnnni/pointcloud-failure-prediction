@@ -1,0 +1,40 @@
+[
+  {
+    "n": 8,
+    "max_abs_difference": 0.0,
+    "predictions_equal": true,
+    "official_wrapper_sha256": "598107018aed36c015f92e85e5eb5503d90ba2af32d451635b1d6e9918b72c41",
+    "official_core_sha256": "e5af6acf4dee77e98fe5f223878a230eea0e1bb80d974a2db119751ad5163c09",
+    "file": "data_cutout_1.npy",
+    "object_ids": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      7,
+      8
+    ],
+    "split_scope": "train_validation_only"
+  },
+  {
+    "n": 8,
+    "max_abs_difference": 0.0,
+    "predictions_equal": true,
+    "official_wrapper_sha256": "598107018aed36c015f92e85e5eb5503d90ba2af32d451635b1d6e9918b72c41",
+    "official_core_sha256": "e5af6acf4dee77e98fe5f223878a230eea0e1bb80d974a2db119751ad5163c09",
+    "file": "data_gaussian_5.npy",
+    "object_ids": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      7,
+      8
+    ],
+    "split_scope": "train_validation_only"
+  }
+]

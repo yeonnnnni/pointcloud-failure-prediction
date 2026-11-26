@@ -1,0 +1,12 @@
+{
+  "n_objects": 2468,
+  "clean_points_per_object": 2048,
+  "original_points_per_object": 1024,
+  "labels_identical": true,
+  "unique_original_filenames": 2468,
+  "class_name_matches": true,
+  "all_original_rows_exact_subsets_of_same_clean_row": true,
+  "max_nearest_neighbor_distance": 0.0,
+  "method": "clean 2048점의 cKDTree로 같은 행 original 1024점의 최근접 거리를 전체 2468개 물체에서 확인",
+  "scope": "공식 배포 data_original.npy와 clean HDF5의 대응 검증; 손상 유형별 생성 방식은 공식 코드 참조"
+}

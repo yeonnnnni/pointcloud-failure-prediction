@@ -1,0 +1,472 @@
+{
+  "passed": true,
+  "pilot": true,
+  "partial": false,
+  "scope_warning": "파일럿 validation 동작 점검이며 최종 test 성능이 아님",
+  "expected_conditions": 4,
+  "official_total_conditions": 75,
+  "missing_conditions": [
+    {
+      "corruption": "background",
+      "severity": 1
+    },
+    {
+      "corruption": "background",
+      "severity": 2
+    },
+    {
+      "corruption": "background",
+      "severity": 3
+    },
+    {
+      "corruption": "background",
+      "severity": 4
+    },
+    {
+      "corruption": "background",
+      "severity": 5
+    },
+    {
+      "corruption": "cutout",
+      "severity": 2
+    },
+    {
+      "corruption": "cutout",
+      "severity": 3
+    },
+    {
+      "corruption": "cutout",
+      "severity": 4
+    },
+    {
+      "corruption": "density",
+      "severity": 1
+    },
+    {
+      "corruption": "density",
+      "severity": 2
+    },
+    {
+      "corruption": "density",
+      "severity": 3
+    },
+    {
+      "corruption": "density",
+      "severity": 4
+    },
+    {
+      "corruption": "density",
+      "severity": 5
+    },
+    {
+      "corruption": "density_inc",
+      "severity": 1
+    },
+    {
+      "corruption": "density_inc",
+      "severity": 2
+    },
+    {
+      "corruption": "density_inc",
+      "severity": 3
+    },
+    {
+      "corruption": "density_inc",
+      "severity": 4
+    },
+    {
+      "corruption": "density_inc",
+      "severity": 5
+    },
+    {
+      "corruption": "distortion",
+      "severity": 1
+    },
+    {
+      "corruption": "distortion",
+      "severity": 2
+    },
+    {
+      "corruption": "distortion",
+      "severity": 3
+    },
+    {
+      "corruption": "distortion",
+      "severity": 4
+    },
+    {
+      "corruption": "distortion",
+      "severity": 5
+    },
+    {
+      "corruption": "distortion_rbf",
+      "severity": 1
+    },
+    {
+      "corruption": "distortion_rbf",
+      "severity": 2
+    },
+    {
+      "corruption": "distortion_rbf",
+      "severity": 3
+    },
+    {
+      "corruption": "distortion_rbf",
+      "severity": 4
+    },
+    {
+      "corruption": "distortion_rbf",
+      "severity": 5
+    },
+    {
+      "corruption": "distortion_rbf_inv",
+      "severity": 1
+    },
+    {
+      "corruption": "distortion_rbf_inv",
+      "severity": 2
+    },
+    {
+      "corruption": "distortion_rbf_inv",
+      "severity": 3
+    },
+    {
+      "corruption": "distortion_rbf_inv",
+      "severity": 4
+    },
+    {
+      "corruption": "distortion_rbf_inv",
+      "severity": 5
+    },
+    {
+      "corruption": "gaussian",
+      "severity": 2
+    },
+    {
+      "corruption": "gaussian",
+      "severity": 3
+    },
+    {
+      "corruption": "gaussian",
+      "severity": 4
+    },
+    {
+      "corruption": "impulse",
+      "severity": 1
+    },
+    {
+      "corruption": "impulse",
+      "severity": 2
+    },
+    {
+      "corruption": "impulse",
+      "severity": 3
+    },
+    {
+      "corruption": "impulse",
+      "severity": 4
+    },
+    {
+      "corruption": "impulse",
+      "severity": 5
+    },
+    {
+      "corruption": "lidar",
+      "severity": 1
+    },
+    {
+      "corruption": "lidar",
+      "severity": 2
+    },
+    {
+      "corruption": "lidar",
+      "severity": 3
+    },
+    {
+      "corruption": "lidar",
+      "severity": 4
+    },
+    {
+      "corruption": "lidar",
+      "severity": 5
+    },
+    {
+      "corruption": "occlusion",
+      "severity": 1
+    },
+    {
+      "corruption": "occlusion",
+      "severity": 2
+    },
+    {
+      "corruption": "occlusion",
+      "severity": 3
+    },
+    {
+      "corruption": "occlusion",
+      "severity": 4
+    },
+    {
+      "corruption": "occlusion",
+      "severity": 5
+    },
+    {
+      "corruption": "rotation",
+      "severity": 1
+    },
+    {
+      "corruption": "rotation",
+      "severity": 2
+    },
+    {
+      "corruption": "rotation",
+      "severity": 3
+    },
+    {
+      "corruption": "rotation",
+      "severity": 4
+    },
+    {
+      "corruption": "rotation",
+      "severity": 5
+    },
+    {
+      "corruption": "shear",
+      "severity": 1
+    },
+    {
+      "corruption": "shear",
+      "severity": 2
+    },
+    {
+      "corruption": "shear",
+      "severity": 3
+    },
+    {
+      "corruption": "shear",
+      "severity": 4
+    },
+    {
+      "corruption": "shear",
+      "severity": 5
+    },
+    {
+      "corruption": "uniform",
+      "severity": 1
+    },
+    {
+      "corruption": "uniform",
+      "severity": 2
+    },
+    {
+      "corruption": "uniform",
+      "severity": 3
+    },
+    {
+      "corruption": "uniform",
+      "severity": 4
+    },
+    {
+      "corruption": "uniform",
+      "severity": 5
+    },
+    {
+      "corruption": "upsampling",
+      "severity": 1
+    },
+    {
+      "corruption": "upsampling",
+      "severity": 2
+    },
+    {
+      "corruption": "upsampling",
+      "severity": 3
+    },
+    {
+      "corruption": "upsampling",
+      "severity": 4
+    },
+    {
+      "corruption": "upsampling",
+      "severity": 5
+    }
+  ],
+  "evaluation_split": "validation",
+  "timestamp_kst": "2026-11-26T17:21:21.720917+09:00",
+  "n_rows": 400,
+  "n_objects": 100,
+  "n_conditions": 4,
+  "duplicates": 0,
+  "missing_values": 0,
+  "split_object_intersections": 0,
+  "splits": [
+    {
+      "split": "train",
+      "objects": 60,
+      "rows": 240,
+      "positive": 39,
+      "negative": 201
+    },
+    {
+      "split": "validation",
+      "objects": 40,
+      "rows": 160,
+      "positive": 11,
+      "negative": 149
+    }
+  ],
+  "table_sha256": "5c148441b2370d0a6ebff4d907e591c7313edcc664b75d97cbec21520911ba3c",
+  "prediction_table_sha256": "fed0c6a48319c133e7f80ba89fc546cdb665ea417614a1c933f04a4518eb067f",
+  "configuration_sha256": "c4805cf92962b65658ffc73ce30e1b160ff5146f7cc50f05c0d720b79e8ee838",
+  "label_sha256": "97b6e660820103074ab192f10b6d9c33aa0446f1547ddb6ad2ca35a029a63b31",
+  "all_cache_table_and_logits_hashes_verified": true,
+  "all_raw_file_shapes_verified": true,
+  "raw_data_hashes_recomputed": false,
+  "confidence_rows_recomputed": 400,
+  "confidence_max_abs_difference": 0.0,
+  "cache_table_max_abs_difference": 0.0,
+  "geometry_method": "유형마다 SHA-256 이름으로 정한 1개 표본; np.cov + cdist 완전 거리행렬; 자기 인덱스만 제외",
+  "geometry_samples": [
+    {
+      "corruption": "cutout",
+      "severity": 5,
+      "object_id": 1069,
+      "n_points": 724,
+      "max_abs_difference": 0.0
+    },
+    {
+      "corruption": "gaussian",
+      "severity": 1,
+      "object_id": 879,
+      "n_points": 1024,
+      "max_abs_difference": 0.0
+    }
+  ],
+  "evaluation_rows": 160,
+  "models_checked": 4,
+  "validation_thresholds_independently_recomputed": true,
+  "model_predictions_reproduced": true,
+  "metrics": [
+    {
+      "model": "baseline_msp",
+      "ap": 0.45988080648061075,
+      "auroc": 0.8590604026845637,
+      "f1": 0.5,
+      "validation_threshold": 0.7738381389983972,
+      "independent_optimal_threshold": 0.7738381389983972,
+      "validation_f1": 0.5,
+      "reviews": [
+        {
+          "budget_percent": 10,
+          "n_reviewed": 16,
+          "n_captured_errors": 6,
+          "n_total_errors": 11,
+          "capture_rate": 0.5454545454545454,
+          "actual_review_fraction": 0.1,
+          "random_expected_capture": 0.1
+        },
+        {
+          "budget_percent": 20,
+          "n_reviewed": 32,
+          "n_captured_errors": 8,
+          "n_total_errors": 11,
+          "capture_rate": 0.7272727272727273,
+          "actual_review_fraction": 0.2,
+          "random_expected_capture": 0.2
+        }
+      ]
+    },
+    {
+      "model": "lr_combined",
+      "ap": 0.37869080744345013,
+      "auroc": 0.8602806589383771,
+      "f1": 0.4827586206896552,
+      "brier": 0.059362146189901877,
+      "validation_threshold": 0.32327373849282603,
+      "independent_optimal_threshold": 0.32327373849282603,
+      "validation_f1": 0.4827586206896552,
+      "reviews": [
+        {
+          "budget_percent": 10,
+          "n_reviewed": 16,
+          "n_captured_errors": 6,
+          "n_total_errors": 11,
+          "capture_rate": 0.5454545454545454,
+          "actual_review_fraction": 0.1,
+          "random_expected_capture": 0.1
+        },
+        {
+          "budget_percent": 20,
+          "n_reviewed": 32,
+          "n_captured_errors": 8,
+          "n_total_errors": 11,
+          "capture_rate": 0.7272727272727273,
+          "actual_review_fraction": 0.2,
+          "random_expected_capture": 0.2
+        }
+      ]
+    },
+    {
+      "model": "lr_confidence",
+      "ap": 0.47324133064448703,
+      "auroc": 0.8627211714460037,
+      "f1": 0.5,
+      "brier": 0.056892072115019655,
+      "validation_threshold": 0.5939250445836693,
+      "independent_optimal_threshold": 0.5939250445836693,
+      "validation_f1": 0.5,
+      "reviews": [
+        {
+          "budget_percent": 10,
+          "n_reviewed": 16,
+          "n_captured_errors": 6,
+          "n_total_errors": 11,
+          "capture_rate": 0.5454545454545454,
+          "actual_review_fraction": 0.1,
+          "random_expected_capture": 0.1
+        },
+        {
+          "budget_percent": 20,
+          "n_reviewed": 32,
+          "n_captured_errors": 8,
+          "n_total_errors": 11,
+          "capture_rate": 0.7272727272727273,
+          "actual_review_fraction": 0.2,
+          "random_expected_capture": 0.2
+        }
+      ]
+    },
+    {
+      "model": "lr_geometry",
+      "ap": 0.13986774500882299,
+      "auroc": 0.6558877364246491,
+      "f1": 0.28,
+      "brier": 0.06791914543865876,
+      "validation_threshold": 0.17671012886445206,
+      "independent_optimal_threshold": 0.17671012886445206,
+      "validation_f1": 0.28,
+      "reviews": [
+        {
+          "budget_percent": 10,
+          "n_reviewed": 16,
+          "n_captured_errors": 2,
+          "n_total_errors": 11,
+          "capture_rate": 0.18181818181818182,
+          "actual_review_fraction": 0.1,
+          "random_expected_capture": 0.1
+        },
+        {
+          "budget_percent": 20,
+          "n_reviewed": 32,
+          "n_captured_errors": 5,
+          "n_total_errors": 11,
+          "capture_rate": 0.45454545454545453,
+          "actual_review_fraction": 0.2,
+          "random_expected_capture": 0.2
+        }
+      ]
+    }
+  ],
+  "robustness_condition_counts_verified": true,
+  "elapsed_seconds": 0.1082643736153841
+}

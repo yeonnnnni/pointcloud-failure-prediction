@@ -1,0 +1,10 @@
+{
+  "seed": 42,
+  "objects": 2468,
+  "counts": {
+    "train": 1480,
+    "validation": 494,
+    "test": 494
+  },
+  "method": "stratified 60/20/20"
+}
