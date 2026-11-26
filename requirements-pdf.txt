@@ -1,0 +1,4 @@
+# 선택 설치: 설명 문서 PDF 변환용. 실험용 requirements-lock.txt와 별도다.
+WeasyPrint==70.0
+Markdown==3.11.4
+beautifulsoup4==4.15.0

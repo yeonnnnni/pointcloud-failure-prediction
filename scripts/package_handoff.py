@@ -15,7 +15,9 @@ def main():
         raise RuntimeError("전체 실험 독립 감사 통과가 필요합니다.")
     files = [root / "TEAM_START_HERE.md", root / "TEAM_PROJECT_GUIDE.md",
              root / "PRESENTATION_HANDOFF.md", root / "README.md",
+             root / "TEAM_PROJECT_GUIDE.pdf", root / "PRESENTATION_HANDOFF.pdf",
              root / "requirements.txt", root / "requirements-lock.txt",
+             root / "requirements-pdf.txt",
              root / "weights/README.md", root / "weights/manifest.json"]
     files += [root / "configs/object_splits.csv", root / "configs/object_splits.json"]
     files += sorted((root / "doc").glob("*.md"))

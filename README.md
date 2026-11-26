@@ -4,6 +4,8 @@
 
 프로젝트 상세 설명은 [TEAM_PROJECT_GUIDE.md](TEAM_PROJECT_GUIDE.md)에 있다. Introduction·Method·Experiment 각각의 5줄 요약, 설계 이유, 실제 그림 11개와 결과 해석, 10분 발표 구성·필수 내용 점검표를 한 문서에 정리했다.
 
+PDF로 읽으려면 [팀원 설명 PDF](TEAM_PROJECT_GUIDE.pdf)와 [발표 인수인계 PDF](PRESENTATION_HANDOFF.pdf)를 받으면 된다. 한글 글꼴·표·본문 그림·목차를 포함하며, 외부 자료 링크는 GitHub로 연결된다.
+
 연구 질문은 **PointNet의 confidence에 입력 point cloud의 geometry를 추가하면 같은 검토 예산에서 오분류를 더 많이 포착할 수 있는가?**이다. 고정된 공식 PointNet으로 ModelNet40-C를 추론하고, 원본 물체 단위로 나눈 train/validation/test에서 오분류 탐지기를 비교한다.
 
 실험 정의는 [EXPERIMENT_SPEC.md](doc/EXPERIMENT_SPEC.md), 진행·완료 여부는 [EXECUTION_TODO.md](doc/EXECUTION_TODO.md), 수업 요구사항 대조는 [REQUIREMENTS_REVIEW.md](doc/REQUIREMENTS_REVIEW.md)를 따른다. 2026-11-26에 **75/75개 조건·185,100행**의 실험과 독립 검증을 완료했다. [PRESENTATION_HANDOFF.md](PRESENTATION_HANDOFF.md)에 최종 그림·숫자·10분 발표 순서와 예상 질문을 정리했다.
@@ -138,6 +140,13 @@ python scripts/plot_geometry_explainer.py
 첫 명령은 test ID·75조건·타깃·중복·점수 순위를 확인하고 AP·검토 포착 수·조건별 차이를 재계산해 기존 결과와 대조한다. 입력과 그림 코드의 SHA-256은 `results/figures/presentation_manifest.json`에 저장한다. 실험 당시의 코드 기록은 `results/reproducibility.json`에 보존한다.
 
 ## 발표 자료 내보내기
+
+PDF를 다시 만들 때만 `requirements-pdf.txt`의 도구를 별도 설치한다. Linux의 Pango와 Noto Sans CJK KR 글꼴이 필요하며, 실험 환경의 lock 파일과는 별개다. 문서를 읽기만 할 때는 설치가 필요 없다.
+
+```bash
+python -m pip install -r requirements-pdf.txt
+python scripts/export_documents_pdf.py
+```
 
 ```bash
 python scripts/export_results.py

@@ -76,6 +76,8 @@ ZIP 안에서 MD 파일 하나만 꺼내지 말고 **폴더 전체를 같은 구
 
 ### VS Code로 보는 경우
 
+Markdown 미리보기 없이 읽으려면 [팀원 설명 PDF](TEAM_PROJECT_GUIDE.pdf) 또는 [발표 인수인계 PDF](PRESENTATION_HANDOFF.pdf)를 일반 PDF 뷰어로 열면 된다. 상세 설명 PDF에는 본문 그림11개가 포함되고, 인수인계 PDF는 원문처럼 표와 그림 링크 중심이다.
+
 1. VS Code에서 **파일 → 폴더 열기**로 저장소 폴더 전체를 연다.
 2. `TEAM_PROJECT_GUIDE.md`를 선택한다.
 3. Markdown 미리보기를 연다. Windows·Linux는 `Ctrl+Shift+V`, macOS는 `Cmd+Shift+V`를 사용하거나, 명령 팔레트에서 `Markdown: Open Preview`를 선택한다.
