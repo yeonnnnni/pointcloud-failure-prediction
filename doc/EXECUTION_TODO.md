@@ -162,7 +162,7 @@
 
 - [x] `TEAM_PROJECT_GUIDE.md`와 `PRESENTATION_HANDOFF.md`를 한글·표·그림이 포함된 PDF로 변환.
 - [x] 내용·그림 누락과 페이지 잘림을 확인하고 PDF 및 재현 방법 제공.
-- [ ] 전달 ZIP·TODO 갱신, 생성 PDF만 공개 허용하여 커밋·원격 반영.
+- [x] 전달 ZIP·TODO 갱신, 생성 PDF만 공개 허용하여 커밋·원격 반영. `ceb9c480335fceaf34f12f7cbb5a4f6c1c301683` 게시 후 로컬·원격 파일 tree 일치 확인.
 
 - 상세 설명24쪽·본문 그림11개, 인수인계7쪽·원문 표/그림 링크 유지. 한글 글꼴 내장, PDF 목차·내부 이동4개·외부 자료 링크85개 확인. 전체30개 표의 셀과 본문을 원문과 대조해 누락0, 페이지 밖 텍스트0. 짧은 표는 한 페이지에 유지했다.
 - `scripts/export_documents_pdf.py`와 선택 설치 `requirements-pdf.txt`로 재생성 가능. 전달 ZIP87파일·약7.2MB에 두 PDF 포함, ZIP 무결성 통과. 원본 첨부 PDF·데이터·캐시는 계속 제외한다.
