@@ -1,5 +1,7 @@
 # PointNet 오분류 위험 예측
 
+처음 읽는 팀원은 [TEAM_PROJECT_GUIDE.md](TEAM_PROJECT_GUIDE.md)부터 보면 된다. Introduction·Method·Experiment 각각의 5줄 요약, 설계 이유, 실제 그림 11개와 결과 해석, 10분 발표 구성·필수 내용 점검표를 한 문서에 정리했다.
+
 연구 질문은 **PointNet의 confidence에 입력 point cloud의 geometry를 추가하면 같은 검토 예산에서 오분류를 더 많이 포착할 수 있는가?**이다. 고정된 공식 PointNet으로 ModelNet40-C를 추론하고, 원본 물체 단위로 나눈 train/validation/test에서 오분류 탐지기를 비교한다.
 
 실험 정의는 [EXPERIMENT_SPEC.md](doc/EXPERIMENT_SPEC.md), 진행·완료 여부는 [EXECUTION_TODO.md](doc/EXECUTION_TODO.md), 수업 요구사항 대조는 [REQUIREMENTS_REVIEW.md](doc/REQUIREMENTS_REVIEW.md)를 따른다. 2026-11-26에 **75/75개 조건·185,100행**의 실험과 독립 검증을 완료했다. [PRESENTATION_HANDOFF.md](PRESENTATION_HANDOFF.md)에 최종 그림·숫자·10분 발표 순서와 예상 질문을 정리했다.

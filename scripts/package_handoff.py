@@ -13,7 +13,8 @@ def main():
     audit = json.loads((root / "results/audit.json").read_text())
     if not audit.get("passed") or audit.get("pilot"):
         raise RuntimeError("전체 실험 독립 감사 통과가 필요합니다.")
-    files = [root / "PRESENTATION_HANDOFF.md", root / "README.md"]
+    files = [root / "TEAM_PROJECT_GUIDE.md", root / "PRESENTATION_HANDOFF.md", root / "README.md"]
+    files += [root / "configs/object_splits.csv", root / "configs/object_splits.json"]
     files += sorted((root / "doc").glob("*.md"))
     files += sorted((root / "results").glob("*.json"))
     files += sorted((root / "results/pilot").glob("*"))
