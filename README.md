@@ -119,6 +119,20 @@ python -m pfp.evaluation --table artifacts/full/table.parquet \
 
 `artifacts/full/evaluation/`에는 탐지 지표·robustness·곡선·model 선택 기록·test 점수·bootstrap·permutation importance가 저장된다. `results/`에는 공개 가능한 소형 표와 그림을 모은다. 파일럿 결과는 validation 동작 확인용이며 최종 test 결과와 분리한다.
 
+## 개선 효과 중심 발표 그림
+
+큰 글씨의 16:9 그림 8종을 추가했다. [핵심 개선](results/figures/presentation_main_gains.png), [같은 검토 개수의 결과](results/figures/presentation_review_outcomes.png), [실제 10% 진입 사례](results/figures/presentation_case_10.png), [geometry 설명](results/figures/presentation_geometry_explainer.png)을 먼저 사용하면 된다. 그림 선택 안내와 짧은 용어 설명은 [PRESENTATION_HANDOFF.md](PRESENTATION_HANDOFF.md)의 처음에 있다. 조건·사례의 사후 선택 여부와 전체 개선/악화 범위도 그림과 문서에 표시했다.
+
+기존 최종 test 점수·원본 점군에서 재생성한다. 재학습이나 PointNet 재추론은 필요하지 않다.
+
+```bash
+conda activate pfp
+python scripts/plot_presentation_highlights.py
+python scripts/plot_geometry_explainer.py
+```
+
+첫 명령은 test ID·75조건·타깃·중복·점수 순위를 확인하고 AP·검토 포착 수·조건별 차이를 재계산해 기존 결과와 대조한다. 입력과 그림 코드의 SHA-256은 `results/figures/presentation_manifest.json`에 저장한다. 실험 당시의 코드 기록은 `results/reproducibility.json`에 보존한다.
+
 ## 발표 자료 내보내기
 
 ```bash

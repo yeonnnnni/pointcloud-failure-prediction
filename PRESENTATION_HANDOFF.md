@@ -2,7 +2,32 @@
 
 이정연은 구현·실행·검증·해석을, 이현택은 PPT 작성과 12/3 발표를 담당한다. 발표 10분과 질의응답 3분이며 리허설 목표는 9분 30초다. 11/30까지 전달할 문서·그림·코드 버전을 이 레포에 모은다.
 
-**최종 상태(2026-11-26 KST): 75/75개 조건 전체 실험, 독립 감사, 그림 8종 검수 완료.** 이 문서의 최종 표는 동일 test에서 검증한 실측값이다. 파일럿·74개 조건 부분 기록은 최종 결과와 분리했다. 발표에 쓸 폴더는 `results/figures/`와 `results/tables/`다.
+**최종 상태(2026-11-26 KST): 75/75개 조건 전체 실험, 독립 감사, 기본 그림 8종 검수 완료. 개선 효과를 크게 보여 주는 추가 그림은 아래 안내를 따른다.** 이 문서의 최종 표는 동일 test에서 검증한 실측값이다. 파일럿·74개 조건 부분 기록은 최종 결과와 분리했다. 발표에 쓸 폴더는 `results/figures/`와 `results/tables/`다.
+
+## 추가 그림: 개선 결과부터 보기
+
+추가 그림은 16:9 비율로 만들었다. PNG를 PPT에 그대로 넣으면 되며, 대본이나 발표자 노트는 별도로 만들지 않았다. **핵심 개선·같은 검토량·실제 사례·geometry 설명** 네 종류를 우선 보고, 나머지는 설명이 더 필요할 때 선택한다. 전체 비교표와 기존 그림은 아래에 그대로 남아 있다.
+
+| 용도 | 그림 파일 | 보여 주는 내용 |
+|---|---|---|
+| **핵심 개선 한눈에 보기** | [presentation_main_gains.png](results/figures/presentation_main_gains.png) | AP **+0.09854**, 10% 포착률 **+3.76pp**, 20% **+4.77pp**. 축을 0부터 표시했다. |
+| **똑같은 개수만 검토하기** | [presentation_review_outcomes.png](results/figures/presentation_review_outcomes.png) | 검토 개수를 3,705건·7,410건으로 제한했을 때 오분류 포착 수 **+388건·+493건**. 막대 안의 정답/오답을 구분했다. |
+| **10% 안으로 들어온 실제 오답** | [presentation_case_10.png](results/figures/presentation_case_10.png) | LiDAR 2, ID 2182. glass_box→desk, MSP **0.92592**. 순위 **28,309→3,047위**, 상위 **76.41→8.22%**. |
+| **20% 안으로 들어온 실제 오답** | [presentation_case_20.png](results/figures/presentation_case_20.png) | LiDAR 2, ID 813. dresser→desk, MSP **0.91081**. 순위 **32,234→4,368위**, 상위 **87.00→11.79%**. 10% 안에는 들지 않는다. |
+| **Geometry가 무엇인지** | [presentation_geometry_explainer.png](results/figures/presentation_geometry_explainer.png) | 실제 점군에서 크기(bbox), 퍼짐 방향(PCA), 이웃 간 거리(kNN)를 그림으로 설명한다. 성능 증거와는 구분한다. |
+| 개선이 큰 조건 | [presentation_condition_highlights.png](results/figures/presentation_condition_highlights.png) | 조건 내부 AP 개선 상위 6개와 전체 75조건 분포. 최고는 Occlusion 2 **+0.06125**. 전체는 **41개 개선·34개 악화**다. |
+| 추가 포착의 구성 | [presentation_review_turnover.png](results/figures/presentation_review_turnover.png) | 10%: 새 진입 **1,841−이탈 1,453=순증 388건**. 20%: **1,562−1,069=493건**. |
+| 개선의 불확실성 | [presentation_gain_intervals.png](results/figures/presentation_gain_intervals.png) | AP·포착률 차이와 물체 단위 bootstrap 95% 구간. 세 구간이 모두 0보다 크다. |
+
+색상은 **파랑=confidence**, **주황=confidence+geometry**다. 사례의 초록 음영은 먼저 검토하는 범위이며, 순위가 작을수록 더 일찍 검토한다. 각 그림에 실제 사용 범위를 표시했다. 결과 그림은 같은 파일명의 PDF도 제공한다.
+
+처음 볼 때 필요한 용어만 정리하면, **point cloud**는 물체를 나타내는 3차원 점들의 집합, **confidence**는 PointNet의 예측 확신을 요약한 값, **geometry**는 점들의 크기·퍼짐·이웃 간격이다. **AP**는 오답을 앞쪽에 모으는 순위의 품질이고, **포착률**은 전체 오답 중 검토 목록에 포함된 비율이다. **pp**는 퍼센트포인트로, 28.51%→32.26%의 차이가 3.76pp다.
+
++388/+493은 **포착 수의 순증**이며 새로운 물체 수가 아니다. 1건은 물체 하나의 손상 버전 하나다. 두 방법의 검토 **개수**는 같지만 선택한 입력은 다르다. PointNet의 분류 결과는 고정되어 있으므로 이 숫자를 분류 정확도 개선이라고 쓰지 않는다.
+
+조건 상위 6개와 실제 사례는 결과를 이해하기 위한 **사후 선택**이다. 전체 효과는 전체 test 비교로 판단한다. 조건별 AP 차이 평균 **+0.00661**과 여러 조건을 섞어 계산한 핵심 AP 차이 **+0.09854**는 집계 방식이 다르다. 사례를 골랐다고 모델을 다시 학습하거나 test에 맞춰 설정을 바꾸지는 않았다.
+
+추가 그림의 수치는 [presentation_manifest.json](results/figures/presentation_manifest.json), 조건별 재계산은 [presentation_condition_values.csv](results/figures/presentation_condition_values.csv)에 있다.
 
 ## 발표 질문과 방법
 
@@ -53,7 +78,7 @@ F1의 임계값은 validation에서 정했고 test에서 조정하지 않았다.
 
 표의 pp는 퍼센트포인트(%p)이며, 상대적인 증가율(%)과 구분한다.
 
-읽을 문장: **“같은 3,705개를 검토했을 때 geometry를 추가한 모델은 오류를 388개 더 찾았습니다. 검토 예산을 20%로 늘렸을 때는 493개를 더 찾았습니다.”**
+수치 해석: 검토 개수를 각각 3,705건·7,410건으로 같게 제한했을 때, geometry 추가에 따른 오류 포착 수의 순증은 각각 388건·493건이다.
 
 Bootstrap은 test 원본 물체 494개를 300회 재표집하면서 물체별 75개 행을 함께 뽑았다. 세 차이의 95% 구간이 모두 0보다 크다. 이는 고정된 탐지기와 이 test 표본의 불확실성이며, 다른 split·재학습·다른 모델의 변동까지 포함하지 않는다. 구간 원본은 [paired_bootstrap.json](results/tables/paired_bootstrap.json)이다.
 
@@ -105,7 +130,7 @@ LR은 각 조합에서 C={0.1, 1, 10}을 비교했고 모두 C=10이 선택됐�
 
 ## 10분 발표 구성: 리허설 9분 30초
 
-| 순서 | 시간 | 화면 | 전달할 문장 |
+| 순서 | 시간 | 내용 | 확인할 핵심 |
 |---|---:|---|---|
 | 1 | 0:00~0:45 | 실제 손상 point cloud 사례·연구 질문 | 모델이 자신 있어도 틀릴 수 있으므로 먼저 볼 사례를 고른다. |
 | 2 | 0:45~1:45 | 데이터 규모·원본 ID split | 75개 손상 버전이 같은 물체라는 점을 반영해 나눴다. |
@@ -116,7 +141,7 @@ LR은 각 조합에서 C={0.1, 1, 10}을 비교했고 모두 C=10이 선택됐�
 | 7 | 7:15~8:30 | 중요 feature·개선/악화 사례 | geometry의 관련성과 조건별 예외를 함께 설명한다. |
 | 8 | 8:30~9:30 | 결론·적용 범위·역할 | 이 benchmark와 checkpoint에서 확인한 효과와 남은 검증을 구분한다. |
 
-남는 30초는 슬라이드 전환과 발화 속도 여유다. 발표는 핵심 그림 4개에 집중하고 risk–coverage·조건별 delta·bootstrap·세부 검증은 부록에 둔다.
+남는 30초는 슬라이드 전환과 발화 속도 여유다. 위 시간표는 내용별 시간 배분 참고용이다. 추가 그림 중 핵심 개선·같은 검토량·실제 사례·geometry 설명을 우선 선택하고, risk–coverage·조건별 delta·bootstrap·세부 검증은 필요할 때 사용한다.
 
 ## 예상 질문과 답변
 

@@ -1,0 +1,210 @@
+{
+  "scope": "최종 test · 494개 물체 × 75조건 = 37,050건 · 오분류 10,331건",
+  "source_predictions_sha256": "e4d4bb455b55fecfab54a32b28b0bfdd0b82cfc49ba490871c6400624ea884d9",
+  "script_sha256": "6186c64dd5638a6d45717412fbe19c4f3e8e0abcad4de9f2126fe372df88639a",
+  "metrics": {
+    "lgbm_confidence": {
+      "ap": 0.7069130801388304,
+      "caught_10": 2945,
+      "capture_10": 0.28506436937372953,
+      "reviewed_10": 3705,
+      "caught_20": 5406,
+      "capture_20": 0.5232794501984319,
+      "reviewed_20": 7410
+    },
+    "lgbm_combined": {
+      "ap": 0.8054549682261515,
+      "caught_10": 3333,
+      "capture_10": 0.32262123705352824,
+      "reviewed_10": 3705,
+      "caught_20": 5899,
+      "capture_20": 0.5709999032039493,
+      "reviewed_20": 7410
+    }
+  },
+  "validation": "원본 test ID·75조건·타깃·중복·점수순위·기존 지표 대조 통과",
+  "figures": {
+    "presentation_main_gains": {
+      "metrics": {
+        "lgbm_confidence": {
+          "ap": 0.7069130801388304,
+          "caught_10": 2945,
+          "capture_10": 0.28506436937372953,
+          "reviewed_10": 3705,
+          "caught_20": 5406,
+          "capture_20": 0.5232794501984319,
+          "reviewed_20": 7410
+        },
+        "lgbm_combined": {
+          "ap": 0.8054549682261515,
+          "caught_10": 3333,
+          "capture_10": 0.32262123705352824,
+          "reviewed_10": 3705,
+          "caught_20": 5899,
+          "capture_20": 0.5709999032039493,
+          "reviewed_20": 7410
+        }
+      },
+      "note": "AP는 0~1, 포착률은 0~100% 축. pp는 퍼센트포인트. 동일 알고리즘·동일 튜닝 예산."
+    },
+    "presentation_review_outcomes": [
+      {
+        "budget_pct": 10,
+        "reviewed": 3705,
+        "caught_confidence": 2945,
+        "caught_combined": 3333,
+        "additional": 388
+      },
+      {
+        "budget_pct": 20,
+        "reviewed": 7410,
+        "caught_confidence": 5406,
+        "caught_combined": 5899,
+        "additional": 493
+      }
+    ],
+    "presentation_review_turnover": [
+      {
+        "budget_pct": 10,
+        "common_errors": 1492,
+        "new_errors": 1841,
+        "lost_errors": 1453,
+        "net_gain": 388
+      },
+      {
+        "budget_pct": 20,
+        "common_errors": 4337,
+        "new_errors": 1562,
+        "lost_errors": 1069,
+        "net_gain": 493
+      }
+    ],
+    "presentation_condition_highlights": {
+      "selection": "75조건에서 조건 내부 AP 차이 상위6개, 사후 선택",
+      "top6": [
+        {
+          "corruption": "rotation",
+          "severity": 1,
+          "n_rows": 494,
+          "ap_confidence": 0.45034248861589854,
+          "ap_combined": 0.4967729333093292,
+          "delta_ap": 0.04643044469343066
+        },
+        {
+          "corruption": "gaussian",
+          "severity": 4,
+          "n_rows": 494,
+          "ap_confidence": 0.47971497110846095,
+          "ap_combined": 0.52741199768948,
+          "delta_ap": 0.04769702658101904
+        },
+        {
+          "corruption": "shear",
+          "severity": 5,
+          "n_rows": 494,
+          "ap_confidence": 0.6842841345910571,
+          "ap_combined": 0.7333057205704033,
+          "delta_ap": 0.04902158597934625
+        },
+        {
+          "corruption": "occlusion",
+          "severity": 5,
+          "n_rows": 494,
+          "ap_confidence": 0.7834754733453813,
+          "ap_combined": 0.8348966459233473,
+          "delta_ap": 0.05142117257796608
+        },
+        {
+          "corruption": "occlusion",
+          "severity": 3,
+          "n_rows": 494,
+          "ap_confidence": 0.7535040098681718,
+          "ap_combined": 0.8146350248538067,
+          "delta_ap": 0.06113101498563489
+        },
+        {
+          "corruption": "occlusion",
+          "severity": 2,
+          "n_rows": 494,
+          "ap_confidence": 0.661637123828638,
+          "ap_combined": 0.7228888422215143,
+          "delta_ap": 0.06125171839287624
+        }
+      ],
+      "improved": 41,
+      "worsened": 34,
+      "mean_delta": 0.006605132475657119,
+      "worst": [
+        {
+          "corruption": "cutout",
+          "severity": 5,
+          "n_rows": 494,
+          "ap_confidence": 0.5842196580627093,
+          "ap_combined": 0.5300337323422302,
+          "delta_ap": -0.05418592572047909
+        }
+      ]
+    },
+    "presentation_gain_intervals": [
+      {
+        "metric": "ap",
+        "observed_delta": 0.09854188808732112,
+        "ci95_low": 0.08409519261510046,
+        "ci95_high": 0.11303568572240513,
+        "display_unit": "AP"
+      },
+      {
+        "metric": "capture_rate_10",
+        "observed_delta": 0.03755686767979871,
+        "ci95_low": 0.02942309673052589,
+        "ci95_high": 0.04603022528058151,
+        "display_unit": "pp"
+      },
+      {
+        "metric": "capture_rate_20",
+        "observed_delta": 0.04772045300551742,
+        "ci95_low": 0.03764413111322708,
+        "ci95_high": 0.06052647804438922,
+        "display_unit": "pp"
+      }
+    ],
+    "presentation_case_10": {
+      "selection": "해당 예산 새 진입 오답 중 MSP≥0.9 우선, 순위 상승 최대; 20%는 10% 범위 밖",
+      "budget_pct": 10,
+      "object_id": 2182,
+      "corruption": "lidar",
+      "severity": 2,
+      "true_label": 16,
+      "true_class": "glass_box",
+      "pred_label": 12,
+      "pred_class": "desk",
+      "msp": 0.9259186434779881,
+      "rank_confidence": 28309,
+      "rank_combined": 3047,
+      "original_points": 1024,
+      "corrupted_points": 768,
+      "error": 1,
+      "score_confidence": 0.02863574279419842,
+      "score_combined": 0.8382935161373194
+    },
+    "presentation_case_20": {
+      "selection": "해당 예산 새 진입 오답 중 MSP≥0.9 우선, 순위 상승 최대; 20%는 10% 범위 밖",
+      "budget_pct": 20,
+      "object_id": 813,
+      "corruption": "lidar",
+      "severity": 2,
+      "true_label": 14,
+      "true_class": "dresser",
+      "pred_label": 12,
+      "pred_class": "desk",
+      "msp": 0.9108072834432624,
+      "rank_confidence": 32234,
+      "rank_combined": 4368,
+      "original_points": 1024,
+      "corrupted_points": 768,
+      "error": 1,
+      "score_confidence": 0.013379191714112174,
+      "score_combined": 0.7616344636402859
+    }
+  }
+}
