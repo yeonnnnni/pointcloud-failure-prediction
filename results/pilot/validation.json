@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "rows": 400,
+  "objects": 100,
+  "conditions": 4,
+  "duplicates": 0,
+  "missing": 0,
+  "nonfinite": 0,
+  "split_intersection": 0,
+  "splits": {
+    "train": {
+      "objects": 60,
+      "rows": 240,
+      "positive": 39,
+      "negative": 201
+    },
+    "validation": {
+      "objects": 40,
+      "rows": 160,
+      "positive": 11,
+      "negative": 149
+    }
+  },
+  "mode": "pilot",
+  "elapsed_seconds": 0.12668688409030437,
+  "table_sha256": "5c148441b2370d0a6ebff4d907e591c7313edcc664b75d97cbec21520911ba3c",
+  "evaluation_passed": true
+}

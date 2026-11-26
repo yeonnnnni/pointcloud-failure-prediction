@@ -1,0 +1,104 @@
+{
+  "pilot": true,
+  "evaluation_split": "validation",
+  "scope_warning": "파일럿 validation 동작 점검이며 최종 test 성능이 아님",
+  "seed": 42,
+  "data": {
+    "n_rows": 400,
+    "n_objects": 100,
+    "n_conditions": 4,
+    "duplicate_keys": 0,
+    "missing_values": 0,
+    "split_id_intersections": 0,
+    "feature_columns": {
+      "confidence": [
+        "msp",
+        "entropy",
+        "margin"
+      ],
+      "geometry": [
+        "pca_ratio_1",
+        "pca_ratio_2",
+        "pca_ratio_3",
+        "bbox_x",
+        "bbox_y",
+        "bbox_z",
+        "knn_dist_mean",
+        "knn_dist_std"
+      ],
+      "combined": [
+        "msp",
+        "entropy",
+        "margin",
+        "pca_ratio_1",
+        "pca_ratio_2",
+        "pca_ratio_3",
+        "bbox_x",
+        "bbox_y",
+        "bbox_z",
+        "knn_dist_mean",
+        "knn_dist_std"
+      ]
+    },
+    "splits": [
+      {
+        "split": "train",
+        "n_objects": 60,
+        "n_rows": 240,
+        "n_errors": 39,
+        "n_correct": 201,
+        "error_rate": 0.1625
+      },
+      {
+        "split": "validation",
+        "n_objects": 40,
+        "n_rows": 160,
+        "n_errors": 11,
+        "n_correct": 149,
+        "error_rate": 0.06875
+      }
+    ],
+    "conditions": [
+      {
+        "corruption": "cutout",
+        "severity": 1
+      },
+      {
+        "corruption": "cutout",
+        "severity": 5
+      },
+      {
+        "corruption": "gaussian",
+        "severity": 1
+      },
+      {
+        "corruption": "gaussian",
+        "severity": 5
+      }
+    ]
+  },
+  "pointnet_robustness": {
+    "n_rows": 400,
+    "n_errors": 50,
+    "accuracy": 0.875,
+    "error_rate": 0.125,
+    "macro_f1": 0.6664215122483396
+  },
+  "n_evaluation_rows": 160,
+  "n_evaluation_objects": 40,
+  "evaluation_error_prevalence": 0.06875,
+  "tie_break": "descending score, ascending object_id, corruption, severity",
+  "f1_threshold_rule": "maximize validation F1; ties choose highest threshold",
+  "calibration": "none; learned models output uncalibrated P(error=1)",
+  "model_selection_uses_test": false,
+  "features_exclude": [
+    "object_id",
+    "corruption",
+    "severity",
+    "split",
+    "true_label",
+    "pred_label",
+    "error"
+  ],
+  "elapsed_seconds": 0.07936882879585028
+}

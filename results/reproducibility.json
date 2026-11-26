@@ -1,0 +1,52 @@
+{
+  "status": "complete",
+  "completed_conditions": 75,
+  "rows": 185100,
+  "objects": 2468,
+  "seed": 42,
+  "table_sha256": "57a084c6bdbe9bff3a3510957ade740fcb06b82f89fdfa090ba989d0c8efaa17",
+  "prediction_table_sha256": "e4d4bb455b55fecfab54a32b28b0bfdd0b82cfc49ba490871c6400624ea884d9",
+  "checkpoint_sha256": "aeb4119c854f4e4c4f0983f008d51903caedf2414c9bf89aa81eb4a2381937b8",
+  "label_sha256": "97b6e660820103074ab192f10b6d9c33aa0446f1547ddb6ad2ca35a029a63b31",
+  "official_source_sha256": {
+    "official/pointnet_pyt/pointnet/model.py": "e5af6acf4dee77e98fe5f223878a230eea0e1bb80d974a2db119751ad5163c09",
+    "official/models/pointnet.py": "598107018aed36c015f92e85e5eb5503d90ba2af32d451635b1d6e9918b72c41"
+  },
+  "project_source_sha256": {
+    "pfp/evaluation.py": "63fd23ca70dbfddd5bc1d6a70a69847c152c8b9a6b6113af686a1c68dd789709",
+    "pfp/pipeline.py": "91ab2a6094c87e4aae8b450c28f1e32d7a069c10f3b9af36cef322762cffaccb",
+    "pfp/audit.py": "d7ed1fbe341e0e82c3cae85099e23a95c4340d7fcf07d1f5e85ebef7ad4610b0",
+    "pfp/pointnet.py": "b92858f215fa17558bc6741edb34f19832018c6e906f426720f5b24fbb44b26c",
+    "pfp/geometry.py": "9b48eb5ffe21a4e52013485fe151d0bee927af8aba0ac4d87f7d908f1cc3a6d0",
+    "pfp/data.py": "bc8539cd1bb66c624fe859fd456c2daedecfe9f98404e0a700c08c60f1f8a829",
+    "pfp/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "pfp/plots.py": "28e16942a6323426599078cf3045052f75147c74f5007ea464e213535f114ab9",
+    "scripts/export_results.py": "bfcf428c14103e4171f46f8495aa187e47a5ec2e4a3a686769b83dd9a211c7db",
+    "scripts/package_handoff.py": "de59340843f20d8766097595b7473763e071b5b4a820cc14d3a654b020183b55",
+    "scripts/download_modelnet40c.py": "045cc7612046986a909bb7ebaa0a0f89537811bfb0fe27f61fc711568deaa572",
+    "scripts/prepare_clean.py": "ef23b912c5f9eda0944ee1b73da509c96eb6169849d96a7a51274af845cf7e50",
+    "scripts/verify_data_alignment.py": "dc73858ac24cb343e72bc409c27b58b41f2d4f29ef603e41d6cc43d8c56cc6b7",
+    "scripts/verify_downloads.py": "0a935c900c802382e5d6dae3987d726826b5520d66601eeb193488effd8ee922",
+    "scripts/run_all.sh": "6563f4013c02ad2d3f04a6d9247a3f04e997967fb43add70a8bc1190db18ccf4",
+    "requirements-lock.txt": "ad023b3e4fb03e13c4199cddb957f3193eeb4c83104a5087918f69d9b94177fd",
+    "configs/object_splits.csv": "ee251397905b65af33f5caccf9da550ca2c6d8b69c672b3fc9f9ee877d70d1b8"
+  },
+  "runtime": {
+    "inference_sum_seconds": 25.97986007668078,
+    "geometry_sum_seconds": 39.83138287253678,
+    "parallel_condition_compute_note": "추론과 geometry가 조건별로 겹쳐 실행되어 두 시간의 합은 실제 벽시계 시간이 아님",
+    "full_pipeline_until_table_seconds_including_download_wait": 2008.705316516105,
+    "evaluation_seconds": 7.99995376681909,
+    "audit_seconds": 1.1922093923203647
+  },
+  "logs": [
+    "logs/run_all.log",
+    "logs/pilot.log",
+    "logs/pilot_resume.log",
+    "logs/audit.log",
+    "local/download_resume_maintenance.log",
+    "local/download_final_validation.log"
+  ],
+  "resume_command": "conda run --no-capture-output -n pfp python -m pfp.pipeline --mode full --output artifacts/full",
+  "finished_kst": "2026-11-26T17:37:14+09:00"
+}

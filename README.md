@@ -2,7 +2,9 @@
 
 연구 질문은 **PointNet의 confidence에 입력 point cloud의 geometry를 추가하면 같은 검토 예산에서 오분류를 더 많이 포착할 수 있는가?**이다. 고정된 공식 PointNet으로 ModelNet40-C를 추론하고, 원본 물체 단위로 나눈 train/validation/test에서 오분류 탐지기를 비교한다.
 
-실험 정의는 [EXPERIMENT_SPEC.md](doc/EXPERIMENT_SPEC.md), 진행·완료 여부는 [EXECUTION_TODO.md](doc/EXECUTION_TODO.md), 수업 요구사항 대조는 [REQUIREMENTS_REVIEW.md](doc/REQUIREMENTS_REVIEW.md)를 따른다. 최종 그림과 발표용 숫자는 실측 검증이 완료된 후 `results/`와 `PRESENTATION_HANDOFF.md`에 정리한다.
+실험 정의는 [EXPERIMENT_SPEC.md](doc/EXPERIMENT_SPEC.md), 진행·완료 여부는 [EXECUTION_TODO.md](doc/EXECUTION_TODO.md), 수업 요구사항 대조는 [REQUIREMENTS_REVIEW.md](doc/REQUIREMENTS_REVIEW.md)를 따른다. 2026-11-26에 **75/75개 조건·185,100행**의 실험과 독립 검증을 완료했다. [PRESENTATION_HANDOFF.md](PRESENTATION_HANDOFF.md)에 최종 그림·숫자·10분 발표 순서와 예상 질문을 정리했다.
+
+동일 test 494개 물체·37,050행에서 LightGBM confidence→combined의 **AP는 0.7069→0.8055**, **10% 포착률은 28.51%→32.26%(+388건)**, **20%는 52.33%→57.10%(+493건)**였다. 원본 ID bootstrap 95% 구간은 세 차이 모두 0보다 크다. 조건별 AP는 41개 개선·34개 악화하므로 모든 손상에서 개선되었다는 의미는 아니다. 최종 자료는 `results/figures/`와 `results/tables/`, 과거 부분 기록은 `results/provisional74/`로 구분한다.
 
 ## 환경
 
@@ -71,7 +73,7 @@ python -m pfp.pointnet --batch-size 128 --output results/clean_metrics.json
 # train/validation 공통 물체 100개 × Gaussian/Cutout level 1·5
 python -m pfp.pipeline --mode pilot --output artifacts/pilot
 
-# 파일럿 검증 성공 후 전체 75조건과 동일 test의 7가지 탐지 기준 평가
+# 파일럿 검증 성공 후 전체 75개 조건과 동일 test의 7가지 탐지 기준 평가
 python -m pfp.pipeline --mode full --output artifacts/full
 
 # 발표 그림 생성: 표의 AP·AUROC·포착 수를 독립 재집계하여 대조
@@ -116,3 +118,12 @@ python -m pfp.evaluation --table artifacts/full/table.parquet \
 - 검토 포착률은 사람이 해당 오류를 실제로 수정했다는 의미가 아니다. 적용 범위는 사용한 ModelNet40-C와 PointNet 체크포인트다.
 
 `artifacts/full/evaluation/`에는 탐지 지표·robustness·곡선·model 선택 기록·test 점수·bootstrap·permutation importance가 저장된다. `results/`에는 공개 가능한 소형 표와 그림을 모은다. 파일럿 결과는 validation 동작 확인용이며 최종 test 결과와 분리한다.
+
+## 발표 자료 내보내기
+
+```bash
+python scripts/export_results.py
+python scripts/package_handoff.py
+```
+
+전체 독립 감사를 통과한 소형 결과를 `results/`로 모으고, 문서·그림·표만 들어 있는 `artifacts/PPT_HANDOFF_20261126.zip`을 만든다. 전체 실행의 명령·소요 시간·장애 복구·코드 hash는 [EXECUTION_REPORT.md](doc/EXECUTION_REPORT.md)에 기록했다.

@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "rows": 185100,
+  "objects": 2468,
+  "conditions": 75,
+  "duplicates": 0,
+  "missing": 0,
+  "nonfinite": 0,
+  "split_intersection": 0,
+  "splits": {
+    "test": {
+      "objects": 494,
+      "rows": 37050,
+      "positive": 10331,
+      "negative": 26719
+    },
+    "train": {
+      "objects": 1480,
+      "rows": 111000,
+      "positive": 32039,
+      "negative": 78961
+    },
+    "validation": {
+      "objects": 494,
+      "rows": 37050,
+      "positive": 10030,
+      "negative": 27020
+    }
+  },
+  "mode": "full",
+  "elapsed_seconds": 2008.705316516105,
+  "table_sha256": "57a084c6bdbe9bff3a3510957ade740fcb06b82f89fdfa090ba989d0c8efaa17",
+  "evaluation_passed": true
+}

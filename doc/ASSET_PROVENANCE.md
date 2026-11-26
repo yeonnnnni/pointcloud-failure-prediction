@@ -43,3 +43,9 @@
 - 상세 실측값: `results/clean_metrics.json`. 추론은 `pfp` 환경의 PyTorch `2.9.1+cu128`, `cuda:0`에서 수행했다.
 
 전체 2,468개 물체에 대해 공식 `data_original.npy`의 1,024점 각각이 같은 행 clean HDF5 2,048점 안에 정확히 존재하는지 cKDTree로 검증했다. 모든 최근접 거리가 **0**이었다. 라벨·파일명 검증과 함께 clean과 공식 원본 배열의 행 대응을 확인했으며 결과는 `results/data_alignment.json`이다. 재검증 명령은 `python scripts/verify_data_alignment.py`다. 실제 손상 데이터 Cutout level 1과 Gaussian level 5도 train/validation의 8개 물체씩 공식 wrapper와 출력 차이 0을 확인했고 `results/corruption_parity.json`에 저장했다.
+
+## 전체 다운로드 완료 검증
+
+2026-11-26 17:31 KST에 공식 손상 75조건과 original·label을 합친 **77개 파일**의 크기·ZIP CRC32·SHA-256 재검증이 통과했다. 15종 × 5개 level × 2,468개 물체 = **185,100행**이며, 손상 좌표는 모두 유한한 `float32`이고 조건별 점 수는 **649~2,048개**다. 손상 배열의 비압축 크기는 **2,253,283,728 bytes**이며 original·label 포함 **2,283,613,236 bytes**다.
+
+마지막 `upsampling level 5` 다운로드 도중 Zenodo가 17:08 KST부터 서버 점검으로 HTTP 503을 반환했다. 검증된 76개 파일을 재사용하고 60초 간격 재시도 후 마지막 파일을 4 MiB 범위 조각으로 받아 검증했다. 전체 ZIP 파일을 다시 받지 않았으므로 전체 ZIP MD5 검증과 혼동하지 않는다. 상세 검증 결과는 `results/data_download_validation.json`, 재검증 명령은 `python scripts/verify_downloads.py`다.

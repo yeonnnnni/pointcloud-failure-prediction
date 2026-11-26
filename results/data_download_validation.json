@@ -1,0 +1,49 @@
+{
+  "passed": true,
+  "source_url": "https://zenodo.org/api/records/6017834/files/modelnet40_c.zip/content",
+  "expected_archive_bytes": 1970686633,
+  "published_archive_md5": "c4a7fffaa52c80b33f7b3a0ac7782d3b",
+  "whole_archive_md5_verified": false,
+  "verification": "공식 ZIP 중앙디렉터리의 각 파일 크기·CRC32 및 저장한 SHA-256을 전체 파일에서 재검증",
+  "transport": "공식 HTTP Range; 최초 파일 단위, upsampling5 복구는 4MiB 조각(최대4병렬); 429/503 Retry-After 존중",
+  "verified_files": 77,
+  "corruption_conditions": 75,
+  "corruption_types": [
+    "background",
+    "cutout",
+    "density",
+    "density_inc",
+    "distortion",
+    "distortion_rbf",
+    "distortion_rbf_inv",
+    "gaussian",
+    "impulse",
+    "lidar",
+    "occlusion",
+    "rotation",
+    "shear",
+    "uniform",
+    "upsampling"
+  ],
+  "severity_levels": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "objects_per_condition": 2468,
+  "corruption_rows": 185100,
+  "num_classes": 40,
+  "min_points": 649,
+  "max_points": 2048,
+  "corruption_dtypes": [
+    "float32"
+  ],
+  "uncompressed_total_bytes": 2283613236,
+  "uncompressed_corruption_bytes": 2253283728,
+  "finite_coordinates": true,
+  "reused_files_in_final_download": 76,
+  "zip_directory_tail_sha256": "614af6f455276ab5f5a3e8d4a7f0eb9d48f5b87743ee881e65599928ad6d6d11",
+  "verified_at_kst": "2026-11-26T17:31:08+09:00"
+}

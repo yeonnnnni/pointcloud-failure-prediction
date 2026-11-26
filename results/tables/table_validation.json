@@ -1,0 +1,366 @@
+{
+  "n_rows": 185100,
+  "n_objects": 2468,
+  "n_conditions": 75,
+  "duplicate_keys": 0,
+  "missing_values": 0,
+  "split_id_intersections": 0,
+  "feature_columns": {
+    "confidence": [
+      "msp",
+      "entropy",
+      "margin"
+    ],
+    "geometry": [
+      "pca_ratio_1",
+      "pca_ratio_2",
+      "pca_ratio_3",
+      "bbox_x",
+      "bbox_y",
+      "bbox_z",
+      "knn_dist_mean",
+      "knn_dist_std"
+    ],
+    "combined": [
+      "msp",
+      "entropy",
+      "margin",
+      "pca_ratio_1",
+      "pca_ratio_2",
+      "pca_ratio_3",
+      "bbox_x",
+      "bbox_y",
+      "bbox_z",
+      "knn_dist_mean",
+      "knn_dist_std"
+    ]
+  },
+  "splits": [
+    {
+      "split": "test",
+      "n_objects": 494,
+      "n_rows": 37050,
+      "n_errors": 10331,
+      "n_correct": 26719,
+      "error_rate": 0.27883940620782727
+    },
+    {
+      "split": "train",
+      "n_objects": 1480,
+      "n_rows": 111000,
+      "n_errors": 32039,
+      "n_correct": 78961,
+      "error_rate": 0.2886396396396396
+    },
+    {
+      "split": "validation",
+      "n_objects": 494,
+      "n_rows": 37050,
+      "n_errors": 10030,
+      "n_correct": 27020,
+      "error_rate": 0.27071524966261806
+    }
+  ],
+  "conditions": [
+    {
+      "corruption": "background",
+      "severity": 1
+    },
+    {
+      "corruption": "background",
+      "severity": 2
+    },
+    {
+      "corruption": "background",
+      "severity": 3
+    },
+    {
+      "corruption": "background",
+      "severity": 4
+    },
+    {
+      "corruption": "background",
+      "severity": 5
+    },
+    {
+      "corruption": "cutout",
+      "severity": 1
+    },
+    {
+      "corruption": "cutout",
+      "severity": 2
+    },
+    {
+      "corruption": "cutout",
+      "severity": 3
+    },
+    {
+      "corruption": "cutout",
+      "severity": 4
+    },
+    {
+      "corruption": "cutout",
+      "severity": 5
+    },
+    {
+      "corruption": "density",
+      "severity": 1
+    },
+    {
+      "corruption": "density",
+      "severity": 2
+    },
+    {
+      "corruption": "density",
+      "severity": 3
+    },
+    {
+      "corruption": "density",
+      "severity": 4
+    },
+    {
+      "corruption": "density",
+      "severity": 5
+    },
+    {
+      "corruption": "density_inc",
+      "severity": 1
+    },
+    {
+      "corruption": "density_inc",
+      "severity": 2
+    },
+    {
+      "corruption": "density_inc",
+      "severity": 3
+    },
+    {
+      "corruption": "density_inc",
+      "severity": 4
+    },
+    {
+      "corruption": "density_inc",
+      "severity": 5
+    },
+    {
+      "corruption": "distortion",
+      "severity": 1
+    },
+    {
+      "corruption": "distortion",
+      "severity": 2
+    },
+    {
+      "corruption": "distortion",
+      "severity": 3
+    },
+    {
+      "corruption": "distortion",
+      "severity": 4
+    },
+    {
+      "corruption": "distortion",
+      "severity": 5
+    },
+    {
+      "corruption": "distortion_rbf",
+      "severity": 1
+    },
+    {
+      "corruption": "distortion_rbf",
+      "severity": 2
+    },
+    {
+      "corruption": "distortion_rbf",
+      "severity": 3
+    },
+    {
+      "corruption": "distortion_rbf",
+      "severity": 4
+    },
+    {
+      "corruption": "distortion_rbf",
+      "severity": 5
+    },
+    {
+      "corruption": "distortion_rbf_inv",
+      "severity": 1
+    },
+    {
+      "corruption": "distortion_rbf_inv",
+      "severity": 2
+    },
+    {
+      "corruption": "distortion_rbf_inv",
+      "severity": 3
+    },
+    {
+      "corruption": "distortion_rbf_inv",
+      "severity": 4
+    },
+    {
+      "corruption": "distortion_rbf_inv",
+      "severity": 5
+    },
+    {
+      "corruption": "gaussian",
+      "severity": 1
+    },
+    {
+      "corruption": "gaussian",
+      "severity": 2
+    },
+    {
+      "corruption": "gaussian",
+      "severity": 3
+    },
+    {
+      "corruption": "gaussian",
+      "severity": 4
+    },
+    {
+      "corruption": "gaussian",
+      "severity": 5
+    },
+    {
+      "corruption": "impulse",
+      "severity": 1
+    },
+    {
+      "corruption": "impulse",
+      "severity": 2
+    },
+    {
+      "corruption": "impulse",
+      "severity": 3
+    },
+    {
+      "corruption": "impulse",
+      "severity": 4
+    },
+    {
+      "corruption": "impulse",
+      "severity": 5
+    },
+    {
+      "corruption": "lidar",
+      "severity": 1
+    },
+    {
+      "corruption": "lidar",
+      "severity": 2
+    },
+    {
+      "corruption": "lidar",
+      "severity": 3
+    },
+    {
+      "corruption": "lidar",
+      "severity": 4
+    },
+    {
+      "corruption": "lidar",
+      "severity": 5
+    },
+    {
+      "corruption": "occlusion",
+      "severity": 1
+    },
+    {
+      "corruption": "occlusion",
+      "severity": 2
+    },
+    {
+      "corruption": "occlusion",
+      "severity": 3
+    },
+    {
+      "corruption": "occlusion",
+      "severity": 4
+    },
+    {
+      "corruption": "occlusion",
+      "severity": 5
+    },
+    {
+      "corruption": "rotation",
+      "severity": 1
+    },
+    {
+      "corruption": "rotation",
+      "severity": 2
+    },
+    {
+      "corruption": "rotation",
+      "severity": 3
+    },
+    {
+      "corruption": "rotation",
+      "severity": 4
+    },
+    {
+      "corruption": "rotation",
+      "severity": 5
+    },
+    {
+      "corruption": "shear",
+      "severity": 1
+    },
+    {
+      "corruption": "shear",
+      "severity": 2
+    },
+    {
+      "corruption": "shear",
+      "severity": 3
+    },
+    {
+      "corruption": "shear",
+      "severity": 4
+    },
+    {
+      "corruption": "shear",
+      "severity": 5
+    },
+    {
+      "corruption": "uniform",
+      "severity": 1
+    },
+    {
+      "corruption": "uniform",
+      "severity": 2
+    },
+    {
+      "corruption": "uniform",
+      "severity": 3
+    },
+    {
+      "corruption": "uniform",
+      "severity": 4
+    },
+    {
+      "corruption": "uniform",
+      "severity": 5
+    },
+    {
+      "corruption": "upsampling",
+      "severity": 1
+    },
+    {
+      "corruption": "upsampling",
+      "severity": 2
+    },
+    {
+      "corruption": "upsampling",
+      "severity": 3
+    },
+    {
+      "corruption": "upsampling",
+      "severity": 4
+    },
+    {
+      "corruption": "upsampling",
+      "severity": 5
+    }
+  ]
+}

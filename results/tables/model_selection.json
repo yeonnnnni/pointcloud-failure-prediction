@@ -1,0 +1,353 @@
+{
+  "baseline_msp": {
+    "features": [
+      "msp"
+    ],
+    "configuration": null,
+    "validation_ap": 0.7024686166505413,
+    "threshold": 0.48838495523134273,
+    "calibration": "none",
+    "fit_split": null
+  },
+  "lr_confidence": {
+    "features": [
+      "msp",
+      "entropy",
+      "margin"
+    ],
+    "configuration": {
+      "selected": {
+        "C": 10.0,
+        "max_iter": 2000,
+        "solver": "lbfgs",
+        "scaler_fit": "train"
+      },
+      "candidates": [
+        {
+          "C": 0.1,
+          "max_iter": 2000,
+          "solver": "lbfgs",
+          "scaler_fit": "train",
+          "validation_ap": 0.7022270791820737
+        },
+        {
+          "C": 1.0,
+          "max_iter": 2000,
+          "solver": "lbfgs",
+          "scaler_fit": "train",
+          "validation_ap": 0.7023697682260246
+        },
+        {
+          "C": 10.0,
+          "max_iter": 2000,
+          "solver": "lbfgs",
+          "scaler_fit": "train",
+          "validation_ap": 0.702384898448193
+        }
+      ],
+      "selection_metric": "validation AP"
+    },
+    "validation_ap": 0.702384898448193,
+    "threshold": 0.2933916124946385,
+    "calibration": "none",
+    "fit_split": "train"
+  },
+  "lr_geometry": {
+    "features": [
+      "pca_ratio_1",
+      "pca_ratio_2",
+      "pca_ratio_3",
+      "bbox_x",
+      "bbox_y",
+      "bbox_z",
+      "knn_dist_mean",
+      "knn_dist_std"
+    ],
+    "configuration": {
+      "selected": {
+        "C": 10.0,
+        "max_iter": 2000,
+        "solver": "lbfgs",
+        "scaler_fit": "train"
+      },
+      "candidates": [
+        {
+          "C": 0.1,
+          "max_iter": 2000,
+          "solver": "lbfgs",
+          "scaler_fit": "train",
+          "validation_ap": 0.6082746423698102
+        },
+        {
+          "C": 1.0,
+          "max_iter": 2000,
+          "solver": "lbfgs",
+          "scaler_fit": "train",
+          "validation_ap": 0.6082861776612682
+        },
+        {
+          "C": 10.0,
+          "max_iter": 2000,
+          "solver": "lbfgs",
+          "scaler_fit": "train",
+          "validation_ap": 0.6082870312355525
+        }
+      ],
+      "selection_metric": "validation AP"
+    },
+    "validation_ap": 0.6082870312355525,
+    "threshold": 0.3495077458393043,
+    "calibration": "none",
+    "fit_split": "train"
+  },
+  "lr_combined": {
+    "features": [
+      "msp",
+      "entropy",
+      "margin",
+      "pca_ratio_1",
+      "pca_ratio_2",
+      "pca_ratio_3",
+      "bbox_x",
+      "bbox_y",
+      "bbox_z",
+      "knn_dist_mean",
+      "knn_dist_std"
+    ],
+    "configuration": {
+      "selected": {
+        "C": 10.0,
+        "max_iter": 2000,
+        "solver": "lbfgs",
+        "scaler_fit": "train"
+      },
+      "candidates": [
+        {
+          "C": 0.1,
+          "max_iter": 2000,
+          "solver": "lbfgs",
+          "scaler_fit": "train",
+          "validation_ap": 0.766841749457266
+        },
+        {
+          "C": 1.0,
+          "max_iter": 2000,
+          "solver": "lbfgs",
+          "scaler_fit": "train",
+          "validation_ap": 0.7668426560928083
+        },
+        {
+          "C": 10.0,
+          "max_iter": 2000,
+          "solver": "lbfgs",
+          "scaler_fit": "train",
+          "validation_ap": 0.7668447226861957
+        }
+      ],
+      "selection_metric": "validation AP"
+    },
+    "validation_ap": 0.7668447226861957,
+    "threshold": 0.31598867138482184,
+    "calibration": "none",
+    "fit_split": "train"
+  },
+  "lgbm_confidence": {
+    "features": [
+      "msp",
+      "entropy",
+      "margin"
+    ],
+    "configuration": {
+      "selected": {
+        "n_estimators": 500,
+        "learning_rate": 0.05,
+        "num_leaves": 31,
+        "min_child_samples": 100,
+        "reg_lambda": 1.0,
+        "random_state": 42,
+        "n_jobs": 8,
+        "verbosity": -1,
+        "deterministic": true,
+        "force_col_wise": true,
+        "metric": "average_precision",
+        "best_iteration": 111
+      },
+      "candidates": [
+        {
+          "n_estimators": 500,
+          "learning_rate": 0.05,
+          "num_leaves": 15,
+          "min_child_samples": 100,
+          "reg_lambda": 1.0,
+          "random_state": 42,
+          "n_jobs": 8,
+          "verbosity": -1,
+          "deterministic": true,
+          "force_col_wise": true,
+          "metric": "average_precision",
+          "best_iteration": 154,
+          "validation_ap": 0.7019881499851444
+        },
+        {
+          "n_estimators": 500,
+          "learning_rate": 0.05,
+          "num_leaves": 31,
+          "min_child_samples": 100,
+          "reg_lambda": 1.0,
+          "random_state": 42,
+          "n_jobs": 8,
+          "verbosity": -1,
+          "deterministic": true,
+          "force_col_wise": true,
+          "metric": "average_precision",
+          "best_iteration": 111,
+          "validation_ap": 0.7022876410470044
+        }
+      ],
+      "selection_metric": "validation AP",
+      "early_stopping_rounds": 40,
+      "early_stopping_split": "validation"
+    },
+    "validation_ap": 0.7022876410470044,
+    "threshold": 0.3405376527584816,
+    "calibration": "none",
+    "fit_split": "train"
+  },
+  "lgbm_geometry": {
+    "features": [
+      "pca_ratio_1",
+      "pca_ratio_2",
+      "pca_ratio_3",
+      "bbox_x",
+      "bbox_y",
+      "bbox_z",
+      "knn_dist_mean",
+      "knn_dist_std"
+    ],
+    "configuration": {
+      "selected": {
+        "n_estimators": 500,
+        "learning_rate": 0.05,
+        "num_leaves": 31,
+        "min_child_samples": 100,
+        "reg_lambda": 1.0,
+        "random_state": 42,
+        "n_jobs": 8,
+        "verbosity": -1,
+        "deterministic": true,
+        "force_col_wise": true,
+        "metric": "average_precision",
+        "best_iteration": 355
+      },
+      "candidates": [
+        {
+          "n_estimators": 500,
+          "learning_rate": 0.05,
+          "num_leaves": 15,
+          "min_child_samples": 100,
+          "reg_lambda": 1.0,
+          "random_state": 42,
+          "n_jobs": 8,
+          "verbosity": -1,
+          "deterministic": true,
+          "force_col_wise": true,
+          "metric": "average_precision",
+          "best_iteration": 500,
+          "validation_ap": 0.6856535862504689
+        },
+        {
+          "n_estimators": 500,
+          "learning_rate": 0.05,
+          "num_leaves": 31,
+          "min_child_samples": 100,
+          "reg_lambda": 1.0,
+          "random_state": 42,
+          "n_jobs": 8,
+          "verbosity": -1,
+          "deterministic": true,
+          "force_col_wise": true,
+          "metric": "average_precision",
+          "best_iteration": 355,
+          "validation_ap": 0.6905975295483552
+        }
+      ],
+      "selection_metric": "validation AP",
+      "early_stopping_rounds": 40,
+      "early_stopping_split": "validation"
+    },
+    "validation_ap": 0.6905975295483552,
+    "threshold": 0.3099301655602182,
+    "calibration": "none",
+    "fit_split": "train"
+  },
+  "lgbm_combined": {
+    "features": [
+      "msp",
+      "entropy",
+      "margin",
+      "pca_ratio_1",
+      "pca_ratio_2",
+      "pca_ratio_3",
+      "bbox_x",
+      "bbox_y",
+      "bbox_z",
+      "knn_dist_mean",
+      "knn_dist_std"
+    ],
+    "configuration": {
+      "selected": {
+        "n_estimators": 500,
+        "learning_rate": 0.05,
+        "num_leaves": 15,
+        "min_child_samples": 100,
+        "reg_lambda": 1.0,
+        "random_state": 42,
+        "n_jobs": 8,
+        "verbosity": -1,
+        "deterministic": true,
+        "force_col_wise": true,
+        "metric": "average_precision",
+        "best_iteration": 443
+      },
+      "candidates": [
+        {
+          "n_estimators": 500,
+          "learning_rate": 0.05,
+          "num_leaves": 15,
+          "min_child_samples": 100,
+          "reg_lambda": 1.0,
+          "random_state": 42,
+          "n_jobs": 8,
+          "verbosity": -1,
+          "deterministic": true,
+          "force_col_wise": true,
+          "metric": "average_precision",
+          "best_iteration": 443,
+          "validation_ap": 0.7947243418699459
+        },
+        {
+          "n_estimators": 500,
+          "learning_rate": 0.05,
+          "num_leaves": 31,
+          "min_child_samples": 100,
+          "reg_lambda": 1.0,
+          "random_state": 42,
+          "n_jobs": 8,
+          "verbosity": -1,
+          "deterministic": true,
+          "force_col_wise": true,
+          "metric": "average_precision",
+          "best_iteration": 143,
+          "validation_ap": 0.7941890223742977
+        }
+      ],
+      "selection_metric": "validation AP",
+      "early_stopping_rounds": 40,
+      "early_stopping_split": "validation"
+    },
+    "validation_ap": 0.7947243418699459,
+    "threshold": 0.35091112107652894,
+    "calibration": "none",
+    "fit_split": "train"
+  }
+}

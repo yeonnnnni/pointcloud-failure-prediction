@@ -1,0 +1,24 @@
+{
+  "method": "paired object_id bootstrap; percentile 95% CI; fixed fitted detectors",
+  "seed": 42,
+  "n_requested": 300,
+  "n_valid": 300,
+  "n_objects": 494,
+  "metrics": {
+    "ap": {
+      "mean_delta": 0.09831059249134544,
+      "ci95_low": 0.08409519261510046,
+      "ci95_high": 0.11303568572240513
+    },
+    "capture_rate_10": {
+      "mean_delta": 0.03793006228671324,
+      "ci95_low": 0.029423096730525893,
+      "ci95_high": 0.04603022528058151
+    },
+    "capture_rate_20": {
+      "mean_delta": 0.04877062112887819,
+      "ci95_low": 0.03764413111322708,
+      "ci95_high": 0.06052647804438922
+    }
+  }
+}
