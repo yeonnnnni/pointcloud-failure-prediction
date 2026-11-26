@@ -117,6 +117,8 @@
 - [x] 전체 인수인계의 그림 경로·읽을 숫자·해석·9분30초 흐름·예상 질문과 재현 명령 작성.
 - [x] 서버 점검과 runner 후속 호출 오류 복구 완료. 남은 실험 조건0개, 수행 중인 실험 없음.
 - [x] 최종 75조건 자료 ZIP 55개 파일·약2.2MB 생성, PNG8개 및 ZIP 무결성·필수항목 검증.
-- [ ] 최종 75조건 자료 원격 게시 확인.
+- [x] 최종 75조건 자료 원격 게시 확인. 로컬과 원격의 101개 파일 tree hash 일치.
 
 최종 근거는 `results/audit.json`, `results/data_download_validation.json`, `results/tables/`, `results/figures/`다. 상세 실행·복구 기록은 `EXECUTION_REPORT.md`, 발표 자료는 루트 `PRESENTATION_HANDOFF.md`를 사용한다. 위 시간순 진행 기록의 부분 수치는 당시 범위이며 최종값으로 사용하지 않는다.
+
+- 최종 실측 결과·인수인계 게시 커밋: `a5fe49dcc9c77cca64cff86722a5cbaebff92bee`. 이 완료 체크는 후속 문서 커밋으로 반영한다. 모든 실험·인수인계 작업 완료, 남은 조건이나 실행 중 작업 없음.
