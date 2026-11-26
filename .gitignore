@@ -1,4 +1,4 @@
-# 입력 자산과 실행 캐시는 로컬에만 보관
+# 원본 데이터와 실행 캐시는 로컬에만 보관. 공유 모델 7개는 아래에서 예외 처리.
 data/
 weights/
 vendor/
@@ -26,3 +26,18 @@ __pycache__/
 *.py[cod]
 .env
 .DS_Store
+
+# 팀원 전달용으로 검증한 모델만 포함
+!weights/
+weights/*
+!weights/README.md
+!weights/manifest.json
+!weights/pointnet_model_best_test.pth
+!weights/detectors/
+weights/detectors/*
+!weights/detectors/lr_confidence.joblib
+!weights/detectors/lr_geometry.joblib
+!weights/detectors/lr_combined.joblib
+!weights/detectors/lgbm_confidence.joblib
+!weights/detectors/lgbm_geometry.joblib
+!weights/detectors/lgbm_combined.joblib

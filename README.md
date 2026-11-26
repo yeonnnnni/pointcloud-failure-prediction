@@ -1,6 +1,8 @@
 # PointNet 오분류 위험 예측
 
-처음 읽는 팀원은 [TEAM_PROJECT_GUIDE.md](TEAM_PROJECT_GUIDE.md)부터 보면 된다. Introduction·Method·Experiment 각각의 5줄 요약, 설계 이유, 실제 그림 11개와 결과 해석, 10분 발표 구성·필수 내용 점검표를 한 문서에 정리했다.
+**PPT를 만들 팀원은 [TEAM_START_HERE.md](TEAM_START_HERE.md)부터 읽으면 된다.** 클론 또는 Code → Download ZIP만으로 문서·그림16종·표를 볼 수 있고, PointNet과 탐지기6개 가중치도 포함된다. 발표 준비에는 Python·GPU·데이터 추가 다운로드가 필요 없다.
+
+프로젝트 상세 설명은 [TEAM_PROJECT_GUIDE.md](TEAM_PROJECT_GUIDE.md)에 있다. Introduction·Method·Experiment 각각의 5줄 요약, 설계 이유, 실제 그림 11개와 결과 해석, 10분 발표 구성·필수 내용 점검표를 한 문서에 정리했다.
 
 연구 질문은 **PointNet의 confidence에 입력 point cloud의 geometry를 추가하면 같은 검토 예산에서 오분류를 더 많이 포착할 수 있는가?**이다. 고정된 공식 PointNet으로 ModelNet40-C를 추론하고, 원본 물체 단위로 나눈 train/validation/test에서 오분류 탐지기를 비교한다.
 
@@ -26,7 +28,7 @@ mkdir -p vendor weights data
 git clone https://github.com/jiachens/ModelNet40-C.git vendor/ModelNet40-C
 git -C vendor/ModelNet40-C checkout fad786c430c007cfbb7b4fe90ed1c9873d960921
 python scripts/download_modelnet40c.py --output data --workers 4
-gdown 1eW26u0nm6HETwDSiCyCEoLLY3WnOVt73 -O weights/pointnet_model_best_test.pth
+python scripts/prepare_pointnet.py --download  # 클론에 포함된 파일이 정상이면 재사용
 python scripts/prepare_clean.py --download
 ```
 
@@ -38,7 +40,7 @@ python scripts/prepare_clean.py --download
 
 Range 다운로드는 공식 ZIP의 파일별 CRC32와 크기를 검증한 뒤 저장한다. 전체 ZIP을 재구성하지 않으므로 게시된 ZIP MD5 검증과 구분한다. 다시 실행하면 검증된 파일을 재사용한다. `--pilot-only`로 파일럿과 원본 좌표를 먼저 확보할 수 있다.
 
-데이터·checkpoint·원본 첨부 PDF·로그·대용량 캐시는 Git에서 제외한다. 개인 서버 절대 경로는 `local/`과 `artifacts/`에만 남긴다.
+원본 PointNet checkpoint와 학습한 탐지기6개는 `weights/`에 포함하며 전체 약44.2MB다. `python scripts/verify_shared_assets.py`로 크기·SHA-256과 발표 자료 누락을 확인한다. 원본 데이터·첨부 PDF·로그·대용량 캐시는 Git에서 제외한다. 개인 서버 절대 경로는 `local/`과 `artifacts/`에만 남긴다.
 
 ## 실행 순서
 

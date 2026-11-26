@@ -1,6 +1,6 @@
 # 데이터와 PointNet 출처
 
-실험 정의는 [EXPERIMENT_SPEC.md](EXPERIMENT_SPEC.md)를 따른다. 데이터·체크포인트·공식 코드 clone은 Git에서 제외한다.
+실험 정의는 [EXPERIMENT_SPEC.md](EXPERIMENT_SPEC.md)를 따른다. 팀원 전달 요청에 따라 공식 PointNet 원본 checkpoint와 본 프로젝트 탐지기6개를 `weights/`에 포함했다. 원본 데이터와 공식 코드 clone은 Git에서 제외하며 재현할 때 별도로 받는다. 파일 크기와 hash는 `weights/manifest.json`, 시작 방법은 루트 `TEAM_START_HERE.md`에 있다.
 
 ## 공식 코드와 체크포인트
 

@@ -1,0 +1,47 @@
+{
+  "description": "최종 실험에 사용한 원본 PointNet checkpoint와 탐지기 6개, 파일 내용 변경 없이 공유",
+  "pointnet_source": "https://drive.google.com/file/d/1eW26u0nm6HETwDSiCyCEoLLY3WnOVt73/view",
+  "official_code": "https://github.com/jiachens/ModelNet40-C",
+  "official_commit": "fad786c430c007cfbb7b4fe90ed1c9873d960921",
+  "notices": "doc/THIRD_PARTY_NOTICES.txt",
+  "detector_configuration": "results/tables/model_selection.json",
+  "environment": "requirements-lock.txt",
+  "total_bytes": 44195037,
+  "files": [
+    {
+      "path": "weights/pointnet_model_best_test.pth",
+      "bytes": 41745708,
+      "sha256": "aeb4119c854f4e4c4f0983f008d51903caedf2414c9bf89aa81eb4a2381937b8"
+    },
+    {
+      "path": "weights/detectors/lgbm_combined.joblib",
+      "bytes": 797141,
+      "sha256": "bc560700c72d684a58f1ddbf1cfd6aa7a44ad6dd1544bc889350280e526341a1"
+    },
+    {
+      "path": "weights/detectors/lgbm_confidence.joblib",
+      "bytes": 396447,
+      "sha256": "752cd09e56d4e740dd133524012f2fd6d6fe61bf0c0c6b5e62c71199b67d564a"
+    },
+    {
+      "path": "weights/detectors/lgbm_geometry.joblib",
+      "bytes": 1248797,
+      "sha256": "f65fa728f2fbb47ec5f2d1e36059d07e920624b1715f498625ed09a7de36f53c"
+    },
+    {
+      "path": "weights/detectors/lr_combined.joblib",
+      "bytes": 2511,
+      "sha256": "369ef365a7a59f1341b8b5204c2b649cbae0060154cf75571d0715d922f99a5e"
+    },
+    {
+      "path": "weights/detectors/lr_confidence.joblib",
+      "bytes": 2059,
+      "sha256": "4937ace152930535350137e744a1618896a42ac3f39136d7ee52968d2f5960cd"
+    },
+    {
+      "path": "weights/detectors/lr_geometry.joblib",
+      "bytes": 2374,
+      "sha256": "edb86580d9b937daf08e09787aad1dd3073e8c5fe905e028a9fc613c6726fdfb"
+    }
+  ]
+}

@@ -239,7 +239,7 @@ AP는 코드의 `average_precision_score`다. 위험도 임계값을 바꿀 때 
 
 **LiDAR와 Occlusion의 level은 관측 각도 차이**다. 모든 유형에서 level 1→5를 손상이 점점 심해지는 순서로 읽으면 안 된다. 75는 데이터의 조건 수이며, 75개의 PointNet을 학습했다는 뜻도 아니다.
 
-데이터 파일은 조건별로 읽어 처리했고, 추론 결과와 특징을 조건별 캐시에 저장했다. 전체 데이터·가중치·대용량 캐시는 공개 레포에 넣지 않았다. 출처·체크포인트 hash·환경은 [자산 기록](doc/ASSET_PROVENANCE.md), [환경 기록](results/environment.json), [README](README.md)에 있다.
+데이터 파일은 조건별로 읽어 처리했고, 추론 결과와 특징을 조건별 캐시에 저장했다. 원본 데이터와 대용량 캐시는 공개 레포에 넣지 않았다. 팀원 전달 요청에 따라 PointNet 원본 checkpoint와 학습한 탐지기6개는 `weights/`에 함께 제공한다. 다운로드·폴더 안내는 [팀원 시작 안내](TEAM_START_HERE.md)에 있다. 출처·체크포인트 hash·환경은 [자산 기록](doc/ASSET_PROVENANCE.md), [환경 기록](results/environment.json), [README](README.md)에 있다.
 
 ### 3.2 실제 실행 순서와 검증 결과
 
