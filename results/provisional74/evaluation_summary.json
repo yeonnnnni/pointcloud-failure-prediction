@@ -1,0 +1,440 @@
+{
+  "pilot": false,
+  "evaluation_split": "test",
+  "scope_warning": "부분 결과: 74/75조건, upsampling level5 제외. 최종75조건 성능이 아님.",
+  "seed": 42,
+  "data": {
+    "n_rows": 182632,
+    "n_objects": 2468,
+    "n_conditions": 74,
+    "duplicate_keys": 0,
+    "missing_values": 0,
+    "split_id_intersections": 0,
+    "feature_columns": {
+      "confidence": [
+        "msp",
+        "entropy",
+        "margin"
+      ],
+      "geometry": [
+        "pca_ratio_1",
+        "pca_ratio_2",
+        "pca_ratio_3",
+        "bbox_x",
+        "bbox_y",
+        "bbox_z",
+        "knn_dist_mean",
+        "knn_dist_std"
+      ],
+      "combined": [
+        "msp",
+        "entropy",
+        "margin",
+        "pca_ratio_1",
+        "pca_ratio_2",
+        "pca_ratio_3",
+        "bbox_x",
+        "bbox_y",
+        "bbox_z",
+        "knn_dist_mean",
+        "knn_dist_std"
+      ]
+    },
+    "splits": [
+      {
+        "split": "test",
+        "n_objects": 494,
+        "n_rows": 36556,
+        "n_errors": 10260,
+        "n_correct": 26296,
+        "error_rate": 0.2806652806652807
+      },
+      {
+        "split": "train",
+        "n_objects": 1480,
+        "n_rows": 109520,
+        "n_errors": 31806,
+        "n_correct": 77714,
+        "error_rate": 0.2904127100073046
+      },
+      {
+        "split": "validation",
+        "n_objects": 494,
+        "n_rows": 36556,
+        "n_errors": 9965,
+        "n_correct": 26591,
+        "error_rate": 0.272595469963891
+      }
+    ],
+    "conditions": [
+      {
+        "corruption": "background",
+        "severity": 1
+      },
+      {
+        "corruption": "background",
+        "severity": 2
+      },
+      {
+        "corruption": "background",
+        "severity": 3
+      },
+      {
+        "corruption": "background",
+        "severity": 4
+      },
+      {
+        "corruption": "background",
+        "severity": 5
+      },
+      {
+        "corruption": "cutout",
+        "severity": 1
+      },
+      {
+        "corruption": "cutout",
+        "severity": 2
+      },
+      {
+        "corruption": "cutout",
+        "severity": 3
+      },
+      {
+        "corruption": "cutout",
+        "severity": 4
+      },
+      {
+        "corruption": "cutout",
+        "severity": 5
+      },
+      {
+        "corruption": "density",
+        "severity": 1
+      },
+      {
+        "corruption": "density",
+        "severity": 2
+      },
+      {
+        "corruption": "density",
+        "severity": 3
+      },
+      {
+        "corruption": "density",
+        "severity": 4
+      },
+      {
+        "corruption": "density",
+        "severity": 5
+      },
+      {
+        "corruption": "density_inc",
+        "severity": 1
+      },
+      {
+        "corruption": "density_inc",
+        "severity": 2
+      },
+      {
+        "corruption": "density_inc",
+        "severity": 3
+      },
+      {
+        "corruption": "density_inc",
+        "severity": 4
+      },
+      {
+        "corruption": "density_inc",
+        "severity": 5
+      },
+      {
+        "corruption": "distortion",
+        "severity": 1
+      },
+      {
+        "corruption": "distortion",
+        "severity": 2
+      },
+      {
+        "corruption": "distortion",
+        "severity": 3
+      },
+      {
+        "corruption": "distortion",
+        "severity": 4
+      },
+      {
+        "corruption": "distortion",
+        "severity": 5
+      },
+      {
+        "corruption": "distortion_rbf",
+        "severity": 1
+      },
+      {
+        "corruption": "distortion_rbf",
+        "severity": 2
+      },
+      {
+        "corruption": "distortion_rbf",
+        "severity": 3
+      },
+      {
+        "corruption": "distortion_rbf",
+        "severity": 4
+      },
+      {
+        "corruption": "distortion_rbf",
+        "severity": 5
+      },
+      {
+        "corruption": "distortion_rbf_inv",
+        "severity": 1
+      },
+      {
+        "corruption": "distortion_rbf_inv",
+        "severity": 2
+      },
+      {
+        "corruption": "distortion_rbf_inv",
+        "severity": 3
+      },
+      {
+        "corruption": "distortion_rbf_inv",
+        "severity": 4
+      },
+      {
+        "corruption": "distortion_rbf_inv",
+        "severity": 5
+      },
+      {
+        "corruption": "gaussian",
+        "severity": 1
+      },
+      {
+        "corruption": "gaussian",
+        "severity": 2
+      },
+      {
+        "corruption": "gaussian",
+        "severity": 3
+      },
+      {
+        "corruption": "gaussian",
+        "severity": 4
+      },
+      {
+        "corruption": "gaussian",
+        "severity": 5
+      },
+      {
+        "corruption": "impulse",
+        "severity": 1
+      },
+      {
+        "corruption": "impulse",
+        "severity": 2
+      },
+      {
+        "corruption": "impulse",
+        "severity": 3
+      },
+      {
+        "corruption": "impulse",
+        "severity": 4
+      },
+      {
+        "corruption": "impulse",
+        "severity": 5
+      },
+      {
+        "corruption": "lidar",
+        "severity": 1
+      },
+      {
+        "corruption": "lidar",
+        "severity": 2
+      },
+      {
+        "corruption": "lidar",
+        "severity": 3
+      },
+      {
+        "corruption": "lidar",
+        "severity": 4
+      },
+      {
+        "corruption": "lidar",
+        "severity": 5
+      },
+      {
+        "corruption": "occlusion",
+        "severity": 1
+      },
+      {
+        "corruption": "occlusion",
+        "severity": 2
+      },
+      {
+        "corruption": "occlusion",
+        "severity": 3
+      },
+      {
+        "corruption": "occlusion",
+        "severity": 4
+      },
+      {
+        "corruption": "occlusion",
+        "severity": 5
+      },
+      {
+        "corruption": "rotation",
+        "severity": 1
+      },
+      {
+        "corruption": "rotation",
+        "severity": 2
+      },
+      {
+        "corruption": "rotation",
+        "severity": 3
+      },
+      {
+        "corruption": "rotation",
+        "severity": 4
+      },
+      {
+        "corruption": "rotation",
+        "severity": 5
+      },
+      {
+        "corruption": "shear",
+        "severity": 1
+      },
+      {
+        "corruption": "shear",
+        "severity": 2
+      },
+      {
+        "corruption": "shear",
+        "severity": 3
+      },
+      {
+        "corruption": "shear",
+        "severity": 4
+      },
+      {
+        "corruption": "shear",
+        "severity": 5
+      },
+      {
+        "corruption": "uniform",
+        "severity": 1
+      },
+      {
+        "corruption": "uniform",
+        "severity": 2
+      },
+      {
+        "corruption": "uniform",
+        "severity": 3
+      },
+      {
+        "corruption": "uniform",
+        "severity": 4
+      },
+      {
+        "corruption": "uniform",
+        "severity": 5
+      },
+      {
+        "corruption": "upsampling",
+        "severity": 1
+      },
+      {
+        "corruption": "upsampling",
+        "severity": 2
+      },
+      {
+        "corruption": "upsampling",
+        "severity": 3
+      },
+      {
+        "corruption": "upsampling",
+        "severity": 4
+      }
+    ]
+  },
+  "pointnet_robustness": {
+    "n_rows": 182632,
+    "n_errors": 52031,
+    "accuracy": 0.7151046914012879,
+    "error_rate": 0.28489530859871215,
+    "macro_f1": 0.6614794297500729
+  },
+  "n_evaluation_rows": 36556,
+  "n_evaluation_objects": 494,
+  "evaluation_error_prevalence": 0.2806652806652807,
+  "tie_break": "descending score, ascending object_id, corruption, severity",
+  "f1_threshold_rule": "maximize validation F1; ties choose highest threshold",
+  "calibration": "none; learned models output uncalibrated P(error=1)",
+  "model_selection_uses_test": false,
+  "features_exclude": [
+    "object_id",
+    "corruption",
+    "severity",
+    "split",
+    "true_label",
+    "pred_label",
+    "error"
+  ],
+  "geometry_addition_delta": {
+    "ap": 0.09729169010464045,
+    "auroc": 0.03649925855354341,
+    "capture_rate_10": 0.037037037037037035,
+    "capture_rate_20": 0.05009746588693964,
+    "f1": 0.0540652022542808,
+    "brier": -0.0210515363370289
+  },
+  "paired_bootstrap": {
+    "method": "paired object_id bootstrap; percentile 95% CI; fixed fitted detectors",
+    "seed": 42,
+    "n_requested": 300,
+    "n_valid": 300,
+    "n_objects": 494,
+    "metrics": {
+      "ap": {
+        "mean_delta": 0.09702891862282373,
+        "ci95_low": 0.08353584538218096,
+        "ci95_high": 0.1109572575397698
+      },
+      "capture_rate_10": {
+        "mean_delta": 0.03690041207208175,
+        "ci95_low": 0.029561657579887938,
+        "ci95_high": 0.04522744110810677
+      },
+      "capture_rate_20": {
+        "mean_delta": 0.0501600033197096,
+        "ci95_low": 0.0396314156003335,
+        "ci95_high": 0.06015098188936989
+      }
+    }
+  },
+  "permutation_importance": {
+    "model": "lgbm_combined",
+    "split": "test",
+    "n_rows": 6000,
+    "n_repeats": 5,
+    "seed": 42,
+    "metric": "AP decrease",
+    "interpretation": "관찰된 연관성이며 인과 효과가 아님; feature 상관에 영향받음"
+  },
+  "elapsed_seconds": 7.446805865038186,
+  "partial": true,
+  "missing_conditions": [
+    {
+      "corruption": "upsampling",
+      "severity": 5
+    }
+  ]
+}

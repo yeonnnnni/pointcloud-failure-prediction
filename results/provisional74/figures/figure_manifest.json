@@ -1,0 +1,476 @@
+{
+  "source_table": "table74.parquet",
+  "evaluation_directory": "evaluation74",
+  "evaluation_scope": "부분 결과 test · 36,556행 · 물체 494개 · 74조건",
+  "table_scope": "부분 결과 test/train/validation · 182,632행 · 물체 2,468개 · 74조건",
+  "corruption_heatmap": {
+    "rows": 182632,
+    "conditions": 74,
+    "mean_error_rate": 0.28489530859871215,
+    "highest": [
+      {
+        "corruption": "background",
+        "severity": 5,
+        "error_rate": 0.9529983792544571,
+        "n": 2468,
+        "errors": 2352
+      },
+      {
+        "corruption": "background",
+        "severity": 4,
+        "error_rate": 0.9457050243111832,
+        "n": 2468,
+        "errors": 2334
+      },
+      {
+        "corruption": "background",
+        "severity": 3,
+        "error_rate": 0.9343598055105349,
+        "n": 2468,
+        "errors": 2306
+      }
+    ],
+    "lowest": [
+      {
+        "corruption": "density_inc",
+        "severity": 1,
+        "error_rate": 0.10291734197730956,
+        "n": 2468,
+        "errors": 254
+      },
+      {
+        "corruption": "density_inc",
+        "severity": 4,
+        "error_rate": 0.10291734197730956,
+        "n": 2468,
+        "errors": 254
+      },
+      {
+        "corruption": "density",
+        "severity": 1,
+        "error_rate": 0.10494327390599675,
+        "n": 2468,
+        "errors": 259
+      }
+    ],
+    "scope": "부분 결과 test/train/validation · 182,632행 · 물체 2,468개 · 74조건"
+  },
+  "detection_comparison": {
+    "scope": "부분 결과 test · 36,556행 · 물체 494개 · 74조건",
+    "random_ap": 0.2806652806652807,
+    "metrics": [
+      {
+        "model": "baseline_msp",
+        "ap": 0.7032576934026478,
+        "auroc": 0.8690095359117462,
+        "total_errors": 10260,
+        "n_rows": 36556,
+        "capture_10": 0.28226120857699805,
+        "captured_10": 2896,
+        "reviewed_10": 3656,
+        "capture_20": 0.5173489278752437,
+        "captured_20": 5308,
+        "reviewed_20": 7312
+      },
+      {
+        "model": "lr_confidence",
+        "ap": 0.7036593769495666,
+        "auroc": 0.8695132851015074,
+        "total_errors": 10260,
+        "n_rows": 36556,
+        "capture_10": 0.28118908382066277,
+        "captured_10": 2885,
+        "reviewed_10": 3656,
+        "capture_20": 0.5189083820662768,
+        "captured_20": 5324,
+        "reviewed_20": 7312
+      },
+      {
+        "model": "lr_geometry",
+        "ap": 0.6197209023507838,
+        "auroc": 0.7485192346125769,
+        "total_errors": 10260,
+        "n_rows": 36556,
+        "capture_10": 0.2942495126705653,
+        "captured_10": 3019,
+        "reviewed_10": 3656,
+        "capture_20": 0.44415204678362574,
+        "captured_20": 4557,
+        "reviewed_20": 7312
+      },
+      {
+        "model": "lr_combined",
+        "ap": 0.7789757242287192,
+        "auroc": 0.8983998781898802,
+        "total_errors": 10260,
+        "n_rows": 36556,
+        "capture_10": 0.310233918128655,
+        "captured_10": 3183,
+        "reviewed_10": 3656,
+        "capture_20": 0.5589668615984406,
+        "captured_20": 5735,
+        "reviewed_20": 7312
+      },
+      {
+        "model": "lgbm_confidence",
+        "ap": 0.7079408826922798,
+        "auroc": 0.8755871545031493,
+        "total_errors": 10260,
+        "n_rows": 36556,
+        "capture_10": 0.2838206627680312,
+        "captured_10": 2912,
+        "reviewed_10": 3656,
+        "capture_20": 0.5197855750487329,
+        "captured_20": 5333,
+        "reviewed_20": 7312
+      },
+      {
+        "model": "lgbm_geometry",
+        "ap": 0.7044857307933106,
+        "auroc": 0.8226843215727857,
+        "total_errors": 10260,
+        "n_rows": 36556,
+        "capture_10": 0.3120857699805068,
+        "captured_10": 3202,
+        "reviewed_10": 3656,
+        "capture_20": 0.5117933723196881,
+        "captured_20": 5251,
+        "reviewed_20": 7312
+      },
+      {
+        "model": "lgbm_combined",
+        "ap": 0.8052325727969203,
+        "auroc": 0.9120864130566927,
+        "total_errors": 10260,
+        "n_rows": 36556,
+        "capture_10": 0.32085769980506823,
+        "captured_10": 3292,
+        "reviewed_10": 3656,
+        "capture_20": 0.5698830409356725,
+        "captured_20": 5847,
+        "reviewed_20": 7312
+      }
+    ]
+  },
+  "review_budget": [
+    {
+      "model": "baseline_msp",
+      "budget": 0.1,
+      "reviewed": 3656,
+      "n": 36556,
+      "captured_errors": 2896,
+      "total_errors": 10260,
+      "capture_rate": 0.28226120857699805
+    },
+    {
+      "model": "baseline_msp",
+      "budget": 0.2,
+      "reviewed": 7312,
+      "n": 36556,
+      "captured_errors": 5308,
+      "total_errors": 10260,
+      "capture_rate": 0.5173489278752437
+    },
+    {
+      "model": "lgbm_confidence",
+      "budget": 0.1,
+      "reviewed": 3656,
+      "n": 36556,
+      "captured_errors": 2912,
+      "total_errors": 10260,
+      "capture_rate": 0.2838206627680312
+    },
+    {
+      "model": "lgbm_confidence",
+      "budget": 0.2,
+      "reviewed": 7312,
+      "n": 36556,
+      "captured_errors": 5333,
+      "total_errors": 10260,
+      "capture_rate": 0.5197855750487329
+    },
+    {
+      "model": "lgbm_combined",
+      "budget": 0.1,
+      "reviewed": 3656,
+      "n": 36556,
+      "captured_errors": 3292,
+      "total_errors": 10260,
+      "capture_rate": 0.32085769980506823
+    },
+    {
+      "model": "lgbm_combined",
+      "budget": 0.2,
+      "reviewed": 7312,
+      "n": 36556,
+      "captured_errors": 5847,
+      "total_errors": 10260,
+      "capture_rate": 0.5698830409356725
+    }
+  ],
+  "risk_coverage": {
+    "scope": "부분 결과 test · 36,556행 · 물체 494개 · 74조건",
+    "full_risk": 0.2806652806652807,
+    "definition": "높은 위험도부터 제외하고 남은 샘플의 오류율"
+  },
+  "confidence_distribution": {
+    "scope": "부분 결과 test/train/validation · 182,632행 · 물체 2,468개 · 74조건",
+    "high_confidence_errors_msp_ge_0_9": 472,
+    "total_errors": 52031
+  },
+  "condition_deltas": [
+    {
+      "corruption": "distortion",
+      "n": 2470,
+      "confidence_ap": 0.6579287781677517,
+      "combined_ap": 0.6542782907815565,
+      "delta_ap": -0.0036504873861952225
+    },
+    {
+      "corruption": "gaussian",
+      "n": 2470,
+      "confidence_ap": 0.5253093694720901,
+      "combined_ap": 0.5238115940746777,
+      "delta_ap": -0.0014977753974123598
+    },
+    {
+      "corruption": "cutout",
+      "n": 2470,
+      "confidence_ap": 0.5098336547091282,
+      "combined_ap": 0.5104853666403019,
+      "delta_ap": 0.0006517119311736375
+    },
+    {
+      "corruption": "density",
+      "n": 2470,
+      "confidence_ap": 0.5322042734921979,
+      "combined_ap": 0.5343848968419593,
+      "delta_ap": 0.0021806233497614347
+    },
+    {
+      "corruption": "density_inc",
+      "n": 2470,
+      "confidence_ap": 0.4920513681426397,
+      "combined_ap": 0.4942815796578099,
+      "delta_ap": 0.0022302115151701662
+    },
+    {
+      "corruption": "distortion_rbf",
+      "n": 2470,
+      "confidence_ap": 0.5599829774999262,
+      "combined_ap": 0.5672367084228785,
+      "delta_ap": 0.0072537309229523395
+    },
+    {
+      "corruption": "impulse",
+      "n": 2470,
+      "confidence_ap": 0.6307710781155323,
+      "combined_ap": 0.6382361645018156,
+      "delta_ap": 0.007465086386283293
+    },
+    {
+      "corruption": "rotation",
+      "n": 2470,
+      "confidence_ap": 0.7178277319731934,
+      "combined_ap": 0.727827841678941,
+      "delta_ap": 0.010000109705747606
+    },
+    {
+      "corruption": "uniform",
+      "n": 2470,
+      "confidence_ap": 0.4848329844615876,
+      "combined_ap": 0.4958008473341951,
+      "delta_ap": 0.010967862872607481
+    },
+    {
+      "corruption": "distortion_rbf_inv",
+      "n": 2470,
+      "confidence_ap": 0.623247327111912,
+      "combined_ap": 0.6359524048693317,
+      "delta_ap": 0.012705077757419692
+    },
+    {
+      "corruption": "lidar",
+      "n": 2470,
+      "confidence_ap": 0.7949444083459896,
+      "combined_ap": 0.8121027994757963,
+      "delta_ap": 0.01715839112980677
+    },
+    {
+      "corruption": "background",
+      "n": 2470,
+      "confidence_ap": 0.9522598085258291,
+      "combined_ap": 0.9698324846679636,
+      "delta_ap": 0.017572676142134425
+    },
+    {
+      "corruption": "upsampling",
+      "n": 1976,
+      "confidence_ap": 0.48149123934276655,
+      "combined_ap": 0.5025421068667602,
+      "delta_ap": 0.0210508675239936
+    },
+    {
+      "corruption": "occlusion",
+      "n": 2470,
+      "confidence_ap": 0.7637926054582536,
+      "combined_ap": 0.7938195812993493,
+      "delta_ap": 0.030026975841095704
+    },
+    {
+      "corruption": "shear",
+      "n": 2470,
+      "confidence_ap": 0.6108052547659869,
+      "combined_ap": 0.6425530696549666,
+      "delta_ap": 0.03174781488897971
+    }
+  ],
+  "pointcloud_cases": [
+    {
+      "label": "geometry가 순위를 높인 오답",
+      "object_id": 813,
+      "corruption": "lidar",
+      "severity": 2,
+      "true_label": 14,
+      "true_class": "dresser",
+      "pred_label": 12,
+      "pred_class": "desk",
+      "msp": 0.9108072834432624,
+      "rank_confidence": 31415,
+      "rank_combined": 5303,
+      "n": 36556,
+      "point_count": 768
+    },
+    {
+      "label": "geometry가 순위를 낮춘 오답",
+      "object_id": 1205,
+      "corruption": "density",
+      "severity": 1,
+      "true_label": 26,
+      "true_class": "plant",
+      "pred_label": 15,
+      "pred_class": "flower_pot",
+      "msp": 0.9342345993367582,
+      "rank_confidence": 20182,
+      "rank_combined": 30436,
+      "n": 36556,
+      "point_count": 949
+    },
+    {
+      "label": "결합 모델이 높게 평가한 정답",
+      "object_id": 908,
+      "corruption": "background",
+      "severity": 1,
+      "true_label": 36,
+      "true_class": "tv_stand",
+      "pred_label": 36,
+      "pred_class": "tv_stand",
+      "msp": 0.084554342016667,
+      "rank_confidence": 108,
+      "rank_combined": 29,
+      "n": 36556,
+      "point_count": 1046
+    }
+  ],
+  "feature_importance": [
+    {
+      "feature": "pca_ratio_2",
+      "ap_drop_mean": 0.000957508740195534,
+      "ap_drop_std": 0.0003063637384246803,
+      "n_rows": 6000,
+      "n_repeats": 5,
+      "seed": 42
+    },
+    {
+      "feature": "pca_ratio_1",
+      "ap_drop_mean": 0.003523021493231848,
+      "ap_drop_std": 0.000796649885539755,
+      "n_rows": 6000,
+      "n_repeats": 5,
+      "seed": 42
+    },
+    {
+      "feature": "bbox_x",
+      "ap_drop_mean": 0.010555405695025643,
+      "ap_drop_std": 0.0014934899718395322,
+      "n_rows": 6000,
+      "n_repeats": 5,
+      "seed": 42
+    },
+    {
+      "feature": "entropy",
+      "ap_drop_mean": 0.012105053462648962,
+      "ap_drop_std": 0.0020407890062220688,
+      "n_rows": 6000,
+      "n_repeats": 5,
+      "seed": 42
+    },
+    {
+      "feature": "knn_dist_mean",
+      "ap_drop_mean": 0.014890071763989154,
+      "ap_drop_std": 0.003499605496076548,
+      "n_rows": 6000,
+      "n_repeats": 5,
+      "seed": 42
+    },
+    {
+      "feature": "bbox_y",
+      "ap_drop_mean": 0.017138348113900248,
+      "ap_drop_std": 0.002474347068059396,
+      "n_rows": 6000,
+      "n_repeats": 5,
+      "seed": 42
+    },
+    {
+      "feature": "bbox_z",
+      "ap_drop_mean": 0.017762061294966137,
+      "ap_drop_std": 0.0016811778039734558,
+      "n_rows": 6000,
+      "n_repeats": 5,
+      "seed": 42
+    },
+    {
+      "feature": "msp",
+      "ap_drop_mean": 0.01891083716219628,
+      "ap_drop_std": 0.0029878895096945393,
+      "n_rows": 6000,
+      "n_repeats": 5,
+      "seed": 42
+    },
+    {
+      "feature": "pca_ratio_3",
+      "ap_drop_mean": 0.019940810858196746,
+      "ap_drop_std": 0.002364606638580343,
+      "n_rows": 6000,
+      "n_repeats": 5,
+      "seed": 42
+    },
+    {
+      "feature": "knn_dist_std",
+      "ap_drop_mean": 0.17132492614385053,
+      "ap_drop_std": 0.010252072654409014,
+      "n_rows": 6000,
+      "n_repeats": 5,
+      "seed": 42
+    },
+    {
+      "feature": "margin",
+      "ap_drop_mean": 0.28228996524451877,
+      "ap_drop_std": 0.007484849062722501,
+      "n_rows": 6000,
+      "n_repeats": 5,
+      "seed": 42
+    }
+  ],
+  "feature_importance_scope": "부분 결과 test · 36,556행 · 물체 494개 · 74조건",
+  "files": [
+    "condition_deltas.png",
+    "confidence_distribution.png",
+    "corruption_heatmap.png",
+    "detection_comparison.png",
+    "feature_importance.png",
+    "pointcloud_cases.png",
+    "review_budget.png",
+    "risk_coverage.png"
+  ]
+}

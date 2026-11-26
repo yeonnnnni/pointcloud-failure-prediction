@@ -29,7 +29,16 @@
 
 전체 실험과 독립 감사 완료 후 이 절을 최종 실측값과 실제 그림 경로로 대체한다. 실행 범위가 미완료인 결과는 최종 표에 섞지 않는다.
 
-**부분 실측(74/75조건, Upsampling level5 제외):** 원본2,468개·182,632행이며, 동일 test494개 물체·36,556행·오류10,260개를 평가했다. LightGBM confidence→combined의 AP는0.70794→0.80523, 10% 포착률은28.38%→32.09%(2,912→3,292개), 20%는51.98%→56.99%(5,333→5,847개)다. 이는 최종75조건 수치가 아니며 학습 설정과 탐색 예산을 변경하지 않고 얻은 부분 결과다. 원본은 `artifacts/provisional/evaluation74/`, 부분 그림은 `artifacts/provisional/figures74/`이며 최종 그림 폴더와 분리한다.
+**부분 실측(74/75조건, Upsampling level5 제외):** 원본2,468개·182,632행이며, 동일 test494개 물체·36,556행·오류10,260개를 평가했다. LightGBM confidence→combined의 AP는0.70794→0.80523, 10% 포착률은28.38%→32.09%(2,912→3,292개), 20%는51.98%→56.99%(5,333→5,847개)다. 이는 최종75조건 수치가 아니며 학습 설정과 탐색 예산을 변경하지 않고 얻은 부분 결과다. 공개 원본과 독립 감사는 `results/provisional74/`, 부분 그림은 `results/provisional74/figures/`이며 최종 그림 폴더와 분리한다.
+
+| 부분 결과 그림 | 파일 | 읽을 숫자와 해석 |
+|---|---|---|
+| 오류율 히트맵 | `results/provisional74/figures/corruption_heatmap.png` | 74조건 전체 오류율28.4895%. 빈칸1개는 미실행이며0%가 아니다. |
+| 탐지 비교표 | `results/provisional74/figures/detection_comparison.png` | 같은 LightGBM의 AP0.70794→0.80523. 여러 손상 입력을 섞은 전체 순위의 개선이다. |
+| 검토 예산 | `results/provisional74/figures/review_budget.png` | 10%검토에서380개,20%에서514개 오류를 추가 포착했다. 실제 오류 수정률은 아니다. |
+| 실제 사례 | `results/provisional74/figures/pointcloud_cases.png` | 개선·악화·정답의 오경보를 함께 보여준다. 유형별 효과가 모두 같은 방향은 아니다. |
+
+부분 결과의 paired object bootstrap300회95%구간은 AP차이[0.08354,0.11096],10%포착률차이[2.956,4.523]pp,20%[3.963,6.015]pp다. 조건별 AP는51개개선·23개악화이며, 조건별 차이의 평균과 전체 pooled AP 차이는 서로 다른 수치다.
 
 ## 10분 발표 구성: 리허설 9분30초
 
